@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMGTopicVoiceView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jrP-9s-0bl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfg-Qc-Ezp">
+                    <rect key="frame" x="158" y="120.5" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="pd2-Pm-BPs"/>
+                        <constraint firstAttribute="height" constant="60" id="xO7-ml-uds"/>
+                    </constraints>
+                    <state key="normal" image="send_mail_icon_blue"/>
+                    <connections>
+                        <action selector="iconListenButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="9Xa-3D-7PY"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="455555" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w78-bd-wJ4">
+                    <rect key="frame" x="326.5" y="0.0" width="48.5" height="16"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.43375651041666669" blue="0.55373806423611116" alpha="0.71243578767123283" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="46122555" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jB-pf-LOF">
+                    <rect key="frame" x="304.5" y="282" width="70.5" height="18"/>
+                    <color key="backgroundColor" red="0.3718532986111111" green="0.34507921006944442" blue="0.32014973958333331" alpha="0.48937821061643838" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Cfg-Qc-Ezp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2vY-SH-7wX"/>
+                <constraint firstItem="w78-bd-wJ4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7aY-xe-FGH"/>
+                <constraint firstItem="jrP-9s-0bl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K0y-yV-G7j"/>
+                <constraint firstAttribute="trailing" secondItem="w78-bd-wJ4" secondAttribute="trailing" id="SmE-xQ-hux"/>
+                <constraint firstAttribute="bottom" secondItem="8jB-pf-LOF" secondAttribute="bottom" id="TVS-bR-kpB"/>
+                <constraint firstItem="jrP-9s-0bl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ayk-gf-f4c"/>
+                <constraint firstAttribute="trailing" secondItem="8jB-pf-LOF" secondAttribute="trailing" id="bvA-vs-lMm"/>
+                <constraint firstAttribute="trailing" secondItem="jrP-9s-0bl" secondAttribute="trailing" id="fHl-71-fCH"/>
+                <constraint firstItem="Cfg-Qc-Ezp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mrX-s8-mZg"/>
+                <constraint firstAttribute="bottom" secondItem="jrP-9s-0bl" secondAttribute="bottom" id="t4L-CY-yU2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backImageView" destination="jrP-9s-0bl" id="8EJ-VE-rhX"/>
+                <outlet property="iconListenButton" destination="Cfg-Qc-Ezp" id="orh-wC-27X"/>
+                <outlet property="rightBottomLable" destination="8jB-pf-LOF" id="GPP-Sl-pzF"/>
+                <outlet property="rightTopLable" destination="w78-bd-wJ4" id="ghW-qL-Cou"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="send_mail_icon_blue" width="35" height="35"/>
+    </resources>
+</document>

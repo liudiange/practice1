@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XMGFellowViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="EtT-RO-ZJH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ni-tO-7Sb">
+                    <rect key="frame" x="117.5" y="303" width="139" height="61"/>
+                    <string key="text">我去闻气味
+却为何请问请问
+请去委屈委屈委屈</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1一箭穿心_146x146_@1x" translatesAutoresizingMaskIntoConstraints="NO" id="sbJ-l3-bSs">
+                    <rect key="frame" x="168" y="233" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Faz-EB-Ien"/>
+                        <constraint firstAttribute="width" constant="40" id="cK0-iF-p3V"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aco-Ag-a7e">
+                    <rect key="frame" x="28" y="394" width="320" height="49"/>
+                    <state key="normal" title="点击登陆注册" backgroundImage="tabbar-dark_320x49_@1x"/>
+                    <state key="highlighted" backgroundImage="tabbar-light_320x49_@1x">
+                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="QGF-fU-8UM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5ni-tO-7Sb" firstAttribute="top" secondItem="sbJ-l3-bSs" secondAttribute="bottom" constant="30" id="5QI-xO-yZ1"/>
+                <constraint firstItem="5ni-tO-7Sb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Acw-7I-jCT"/>
+                <constraint firstItem="Aco-Ag-a7e" firstAttribute="top" secondItem="5ni-tO-7Sb" secondAttribute="bottom" constant="30" id="Pco-r3-TLp"/>
+                <constraint firstItem="5ni-tO-7Sb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PiD-mC-Xlw"/>
+                <constraint firstItem="sbJ-l3-bSs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="n0M-tU-unm"/>
+                <constraint firstItem="Aco-Ag-a7e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uEo-IX-B0r"/>
+            </constraints>
+            <point key="canvasLocation" x="-90" y="-25"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1一箭穿心_146x146_@1x" width="146" height="146"/>
+        <image name="tabbar-dark_320x49_@1x" width="320" height="49"/>
+        <image name="tabbar-light_320x49_@1x" width="320" height="49"/>
+    </resources>
+</document>
