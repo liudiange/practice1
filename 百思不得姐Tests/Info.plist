@@ -18,5 +18,9 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>百思不得姐 需要您的同意才能读取媒体资料库</string>
+    <key>NSCameraUsageDescription</key>
+    <string>允许相机打开</string>
 </dict>
 </plist>

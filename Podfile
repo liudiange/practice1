@@ -15,5 +15,6 @@ target '百思不得姐' do
     pod 'FMDB/SQLCipher'
     pod "MagicalRecord"
     pod "MagicalRecord/CocoaLumberjack"
+    pod "DACircularProgress"
 end
 

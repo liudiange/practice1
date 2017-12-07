@@ -43,6 +43,14 @@
                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE9-7R-im3" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="157.5" y="120" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="cRf-lZ-3kp"/>
+                        <constraint firstAttribute="height" constant="60" id="yg9-XU-7rg"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -51,7 +59,9 @@
                 <constraint firstItem="fPl-hN-dEP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Hcu-sd-OII"/>
                 <constraint firstAttribute="bottom" secondItem="Vle-eq-jIo" secondAttribute="bottom" id="Hza-25-9s3"/>
                 <constraint firstItem="Vle-eq-jIo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MGS-nQ-Vlb"/>
+                <constraint firstItem="TE9-7R-im3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="NbU-Fo-txM"/>
                 <constraint firstAttribute="trailing" secondItem="JPC-mS-oNb" secondAttribute="trailing" id="OrU-gw-XoX"/>
+                <constraint firstItem="TE9-7R-im3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q2I-Pb-e2G"/>
                 <constraint firstItem="JPC-mS-oNb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZmZ-dE-H2i"/>
                 <constraint firstAttribute="trailing" secondItem="gtp-2l-4JM" secondAttribute="trailing" id="n5h-yO-uYt"/>
                 <constraint firstAttribute="trailing" secondItem="Vle-eq-jIo" secondAttribute="trailing" id="r7S-od-x2G"/>
@@ -61,6 +71,7 @@
             <connections>
                 <outlet property="backImageView" destination="Vle-eq-jIo" id="ZAB-Z6-H6w"/>
                 <outlet property="iconPlayButton" destination="fPl-hN-dEP" id="A9C-zv-gcu"/>
+                <outlet property="progressView" destination="TE9-7R-im3" id="hVa-rX-nkB"/>
                 <outlet property="rightBottomLable" destination="JPC-mS-oNb" id="cbh-k3-dG7"/>
                 <outlet property="rightToplable" destination="gtp-2l-4JM" id="LEf-Hv-EoP"/>
             </connections>

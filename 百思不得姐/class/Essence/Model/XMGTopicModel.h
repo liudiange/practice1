@@ -44,12 +44,18 @@ typedef NS_ENUM(NSUInteger,TopicType){
 @property (nonatomic, assign) CGFloat width;
 /** 服务器返回的高度*/
 @property (nonatomic, assign) CGFloat height;
-/** 显示的图片*/
-@property (copy, nonatomic) NSString *cdn_img;
+/** 小的图片*/
+@property (copy, nonatomic) NSString *small_image;
+/** 中等的图片*/
+@property (copy, nonatomic) NSString *middle_image;
+/** 大的的图片*/
+@property (copy, nonatomic) NSString *large_image;
 /** 是不是gif图片*/
-@property (copy, nonatomic) NSString *is_gif;
+@property (assign, nonatomic) BOOL is_gif;
 
 
+/** 是不是大图*/
+@property (nonatomic, assign) BOOL is_largeImage;
 /** cell的内容属性*/
 @property (nonatomic, assign) CGFloat cellHeight;
 /** 根据类型显示frame*/

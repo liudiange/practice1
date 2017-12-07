@@ -10,6 +10,3 @@
 #endif
 #endif
 
-#import <CoreData/CoreData.h>
-#import <MagicalRecord/MagicalRecord+Options.h>
-

@@ -20,10 +20,14 @@
                  @"userId" : @"id",
                  };
     }];
+    
     // XMGTopicModel 曲数组中第一个
     [XMGTopicModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
-                  @"top_cmt" : @"top_cmt[0]"
+                  @"top_cmt" : @"top_cmt[0]",
+                  @"small_image" : @"image0",
+                  @"middle_image" : @"image2",
+                  @"large_image" : @"image1"
                  };
     }];
 }

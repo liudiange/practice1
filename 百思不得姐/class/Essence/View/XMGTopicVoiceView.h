@@ -7,12 +7,15 @@
 //
 
 #import "XMGTopicBaseView.h"
+#import "DALabeledCircularProgressView.h"
+
 
 @interface XMGTopicVoiceView : XMGTopicBaseView
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 @property (weak, nonatomic) IBOutlet UIButton *iconListenButton;
 @property (weak, nonatomic) IBOutlet UILabel *rightTopLable;
 @property (weak, nonatomic) IBOutlet UILabel *rightBottomLable;
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 
 
 

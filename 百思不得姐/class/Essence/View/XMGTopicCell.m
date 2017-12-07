@@ -81,14 +81,26 @@
     }else{
         self.commentView.hidden = YES;
     }
+    // 各种按钮
+    [self.dingButton setTitle:topicModel.ding forState:UIControlStateNormal];
+    [self.caiButton setTitle:topicModel.cai forState:UIControlStateNormal];
+    [self.shareButton setTitle:topicModel.repost forState:UIControlStateNormal];
+    [self.commentButton setTitle:topicModel.comment forState:UIControlStateNormal];    
+}
+/**
+ *
+ *  初始化好了在计算frame
+ */
+-(void)layoutSubviews {
+    [super layoutSubviews];
     // 根据类型进行区分
-    switch (topicModel.type) {
+    switch (self.topicModel.type) {
         case TopicTypePicture: // 图片
         {
-            self.topicPictureView.frame = topicModel.frame;
+            self.topicPictureView.frame = self.topicModel.frame;
             // 隐藏或者显示某一个view
             [self displayOrHide:self.topicPictureView];
-            self.topicPictureView.topicModel = topicModel;
+            self.topicPictureView.topicModel = self.topicModel;
         }
             break;
         case TopicTypeWord:   //  段子
@@ -99,29 +111,26 @@
             break;
         case TopicTypeVoice:  //  声音
         {
-            self.topicVoiceView.frame = topicModel.frame;
+            self.topicVoiceView.frame = self.topicModel.frame;
             // 隐藏或者显示某一个view
             [self displayOrHide:self.topicVoiceView];
-            self.topicVoiceView.topicModel = topicModel;
+            self.topicVoiceView.topicModel = self.topicModel;
         }
             break;
         case TopicTypeVideo:  //  视频
         {
-            self.topicVideoView.frame = topicModel.frame;
+            self.topicVideoView.frame = self.topicModel.frame;
             // 隐藏或者显示某一个view
             [self displayOrHide:self.topicVideoView];
-            self.topicVideoView.topicModel = topicModel;
+            self.topicVideoView.topicModel = self.topicModel;
         }
             break;
         default:
             break;
     }
-    // 各种按钮
-    [self.dingButton setTitle:topicModel.ding forState:UIControlStateNormal];
-    [self.caiButton setTitle:topicModel.cai forState:UIControlStateNormal];
-    [self.shareButton setTitle:topicModel.repost forState:UIControlStateNormal];
-    [self.commentButton setTitle:topicModel.comment forState:UIControlStateNormal];    
 }
+
+
 /**
  *
  *  显示时间的lable

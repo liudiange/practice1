@@ -29,6 +29,10 @@
     // 根据类型判断
     if (self.type != TopicTypeWord) {
         CGFloat imageHeight = (ScreenWidth-2*MarGen)*(self.height/self.width);
+        if (imageHeight > ScreenHeight) {
+            imageHeight = 200;
+            self.is_largeImage = YES;
+        }
         self.frame = CGRectMake(MarGen, _cellHeight, ScreenWidth-2*MarGen, imageHeight);
         _cellHeight += imageHeight + MarGen;
     }else {
@@ -44,8 +48,8 @@
                                      NSFontAttributeName : [UIFont systemFontOfSize:15.0]
                                      };
         getCommentSize = [commentStr boundingRectWithSize:commentSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine attributes:commentDic context:nil].size;
-        // 整合高度
-        _cellHeight += getCommentSize.height + MarGen + 55;
+        // 整合高度(30 为最最热评论那几个字和之间的间隙的高度 大概为23 写30是为了留有一点间距)
+        _cellHeight += getCommentSize.height + MarGen + 55 + 30;
         
     }else {
         // 整合高度

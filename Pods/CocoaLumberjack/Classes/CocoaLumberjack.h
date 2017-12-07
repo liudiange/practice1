@@ -66,6 +66,7 @@
 
 // Core
 #import "DDLog.h"
+#import "DDLog+LOGV.h"
 
 // Main macros
 #import "DDLogMacros.h"

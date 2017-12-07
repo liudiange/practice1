@@ -32,6 +32,12 @@
 		2C5B82731FB538640076A5A4 /* XMGAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B82721FB538640076A5A4 /* XMGAudioViewController.m */; };
 		2C5B82761FB538780076A5A4 /* XMGPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B82751FB538780076A5A4 /* XMGPictureViewController.m */; };
 		2C5B82791FB538890076A5A4 /* XMGWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B82781FB538890076A5A4 /* XMGWordViewController.m */; };
+		2C61E5691FD92C8000EE5EE5 /* HZImagesGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E53B1FD92C7F00EE5EE5 /* HZImagesGroupView.m */; };
+		2C61E56A1FD92C8000EE5EE5 /* HZIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E53E1FD92C7F00EE5EE5 /* HZIndicatorView.m */; };
+		2C61E56B1FD92C8000EE5EE5 /* HZPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E5401FD92C7F00EE5EE5 /* HZPhotoBrowser.m */; };
+		2C61E56C1FD92C8000EE5EE5 /* HZPhotoBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E5431FD92C7F00EE5EE5 /* HZPhotoBrowserView.m */; };
+		2C61E56D1FD92C8000EE5EE5 /* whiteplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C61E5441FD92C7F00EE5EE5 /* whiteplaceholder.png */; };
+		2C61E56E1FD92C8000EE5EE5 /* HZPhotoItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E5461FD92C7F00EE5EE5 /* HZPhotoItemModel.m */; };
 		2C6328BA1FC7C2450075BFA2 /* XMGDBBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6328B91FC7C2450075BFA2 /* XMGDBBase.m */; };
 		2C6DAE411FCBF1EB00F2077F /* 20171127151021208_migration.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DAE401FCBF1EB00F2077F /* 20171127151021208_migration.sql */; };
 		2C6DAE451FCBF75E00F2077F /* XMGMigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DAE441FCBF75E00F2077F /* XMGMigrationManager.m */; };
@@ -134,6 +140,18 @@
 		2C5B82751FB538780076A5A4 /* XMGPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGPictureViewController.m; sourceTree = "<group>"; };
 		2C5B82771FB538890076A5A4 /* XMGWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGWordViewController.h; sourceTree = "<group>"; };
 		2C5B82781FB538890076A5A4 /* XMGWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGWordViewController.m; sourceTree = "<group>"; };
+		2C61E53A1FD92C7F00EE5EE5 /* HZImagesGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZImagesGroupView.h; sourceTree = "<group>"; };
+		2C61E53B1FD92C7F00EE5EE5 /* HZImagesGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZImagesGroupView.m; sourceTree = "<group>"; };
+		2C61E53D1FD92C7F00EE5EE5 /* HZIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZIndicatorView.h; sourceTree = "<group>"; };
+		2C61E53E1FD92C7F00EE5EE5 /* HZIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZIndicatorView.m; sourceTree = "<group>"; };
+		2C61E53F1FD92C7F00EE5EE5 /* HZPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowser.h; sourceTree = "<group>"; };
+		2C61E5401FD92C7F00EE5EE5 /* HZPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoBrowser.m; sourceTree = "<group>"; };
+		2C61E5411FD92C7F00EE5EE5 /* HZPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		2C61E5421FD92C7F00EE5EE5 /* HZPhotoBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoBrowserView.h; sourceTree = "<group>"; };
+		2C61E5431FD92C7F00EE5EE5 /* HZPhotoBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoBrowserView.m; sourceTree = "<group>"; };
+		2C61E5441FD92C7F00EE5EE5 /* whiteplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteplaceholder.png; sourceTree = "<group>"; };
+		2C61E5451FD92C7F00EE5EE5 /* HZPhotoItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPhotoItemModel.h; sourceTree = "<group>"; };
+		2C61E5461FD92C7F00EE5EE5 /* HZPhotoItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPhotoItemModel.m; sourceTree = "<group>"; };
 		2C6328B81FC7C2450075BFA2 /* XMGDBBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGDBBase.h; sourceTree = "<group>"; };
 		2C6328B91FC7C2450075BFA2 /* XMGDBBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGDBBase.m; sourceTree = "<group>"; };
 		2C6DAE401FCBF1EB00F2077F /* 20171127151021208_migration.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 20171127151021208_migration.sql; sourceTree = "<group>"; };
@@ -230,6 +248,7 @@
 		2C0BC04D1F9F35A80016E2D5 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				2C61E5391FD92C7F00EE5EE5 /* photoBroser */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -372,6 +391,33 @@
 				2CA8B2D61FD7EEB600AFF686 /* XMGTopicVideoController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C61E5391FD92C7F00EE5EE5 /* photoBroser */ = {
+			isa = PBXGroup;
+			children = (
+				2C61E53A1FD92C7F00EE5EE5 /* HZImagesGroupView.h */,
+				2C61E53B1FD92C7F00EE5EE5 /* HZImagesGroupView.m */,
+				2C61E53C1FD92C7F00EE5EE5 /* HZPhotoBrowser */,
+				2C61E5451FD92C7F00EE5EE5 /* HZPhotoItemModel.h */,
+				2C61E5461FD92C7F00EE5EE5 /* HZPhotoItemModel.m */,
+			);
+			path = photoBroser;
+			sourceTree = "<group>";
+		};
+		2C61E53C1FD92C7F00EE5EE5 /* HZPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				2C61E53D1FD92C7F00EE5EE5 /* HZIndicatorView.h */,
+				2C61E53E1FD92C7F00EE5EE5 /* HZIndicatorView.m */,
+				2C61E53F1FD92C7F00EE5EE5 /* HZPhotoBrowser.h */,
+				2C61E5401FD92C7F00EE5EE5 /* HZPhotoBrowser.m */,
+				2C61E5411FD92C7F00EE5EE5 /* HZPhotoBrowserConfig.h */,
+				2C61E5421FD92C7F00EE5EE5 /* HZPhotoBrowserView.h */,
+				2C61E5431FD92C7F00EE5EE5 /* HZPhotoBrowserView.m */,
+				2C61E5441FD92C7F00EE5EE5 /* whiteplaceholder.png */,
+			);
+			path = HZPhotoBrowser;
 			sourceTree = "<group>";
 		};
 		2C6DAE3F1FCBF11600F2077F /* Migration */ = {
@@ -704,6 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA8B2D31FD7C8C700AFF686 /* XMGTopicVoiceView.xib in Resources */,
+				2C61E56D1FD92C8000EE5EE5 /* whiteplaceholder.png in Resources */,
 				2C3C7C2B1FC3B9E300A5B3CB /* XMGTopicCell.xib in Resources */,
 				2C6DAE411FCBF1EB00F2077F /* 20171127151021208_migration.sql in Resources */,
 				2C7A3C9B1F564C2400358CB9 /* XMGLoginViewController.xib in Resources */,
@@ -790,22 +837,26 @@
 				2C313BA41FBD375700279AFB /* XMGNormalHeader.m in Sources */,
 				2C5B82731FB538640076A5A4 /* XMGAudioViewController.m in Sources */,
 				F1D050B81F08B0450038FDC1 /* AppDelegate.m in Sources */,
+				2C61E5691FD92C8000EE5EE5 /* HZImagesGroupView.m in Sources */,
 				2C102CF01FAFF4AD002B2720 /* NSString+XMGFileSize.m in Sources */,
 				2CCE76111FD79AD1005E944A /* XMGTopicPictureView.m in Sources */,
 				2CCE76191FD7C078005E944A /* XMGTopicVideoView.m in Sources */,
 				2C0DF0E61F9ED8760060B31F /* XMGobject.m in Sources */,
 				2C078B941FCE8E9B00750FC7 /* School.xcdatamodeld in Sources */,
 				2C078B911FCE86BB00750FC7 /* XMGCoreDataManager.m in Sources */,
+				2C61E56B1FD92C8000EE5EE5 /* HZPhotoBrowser.m in Sources */,
 				2C4355301FC56D5E0015DB3F /* XMGGlobalTool.m in Sources */,
 				F10459F71F2A42F200A7DB5F /* UIView+XMGVIew.m in Sources */,
 				F1D050B91F08B0450038FDC1 /* XMGTabBarController.m in Sources */,
 				2C3C7C2E1FC3D46900A5B3CB /* XMGSessionManager.m in Sources */,
 				2C6328BA1FC7C2450075BFA2 /* XMGDBBase.m in Sources */,
+				2C61E56C1FD92C8000EE5EE5 /* HZPhotoBrowserView.m in Sources */,
 				2C7A3C9F1F5651F300358CB9 /* XMGBaseButton.m in Sources */,
 				2C39BE8A1F8D10FF0024027A /* XMGBaseLoginTextfield.m in Sources */,
 				2C0DF0EF1F9EDB4C0060B31F /* XMGSetViewController.m in Sources */,
 				2C5B82701FB538480076A5A4 /* XMGVideoViewController.m in Sources */,
 				2C4AAAC11FB3F43B00CCCE97 /* XMGTitleButton.m in Sources */,
+				2C61E56A1FD92C8000EE5EE5 /* HZIndicatorView.m in Sources */,
 				2CCE76161FD7C025005E944A /* XMGTopicBaseView.m in Sources */,
 				2C9769171FC2663E005D5DE4 /* XMGTopicModel.m in Sources */,
 				2C0DF0E21F9ED74C0060B31F /* UITextField+XMGTextField.m in Sources */,
@@ -827,6 +878,7 @@
 				2C0DF0EE1F9EDB4C0060B31F /* XMGMeViewController.m in Sources */,
 				2CE2E42D1FD4EDB400E9314C /* XMGExtensionConfig.m in Sources */,
 				2C4AAABE1FB3F41200CCCE97 /* XMGEssenceViewController.m in Sources */,
+				2C61E56E1FD92C8000EE5EE5 /* HZPhotoItemModel.m in Sources */,
 				2C5B826D1FB538230076A5A4 /* XMGAllViewController.m in Sources */,
 				2C5B82761FB538780076A5A4 /* XMGPictureViewController.m in Sources */,
 				F10B9CE61EF0CD1800FF8BCE /* main.m in Sources */,

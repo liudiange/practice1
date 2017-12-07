@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "XMGTopicBaseView.h"
+#import <DACircularProgress/DALabeledCircularProgressView.h>
 
 @interface XMGTopicPictureView : XMGTopicBaseView
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 @property (weak, nonatomic) IBOutlet UIButton *changeBigButton;
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
+
 
 
 

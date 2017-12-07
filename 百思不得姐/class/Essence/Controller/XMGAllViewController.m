@@ -65,7 +65,7 @@ static NSString * const TOPICId = @"topic";
 }
 /**
  *
- *  坚挺通知
+ *  监听通知
  */
 - (void)addNotificaion {
         @weakify(self);
