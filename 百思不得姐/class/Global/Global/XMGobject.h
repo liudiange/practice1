@@ -12,3 +12,5 @@
 extern CGFloat const MarGen;
 // 相关的宏定义
 extern NSString *const VideoPlay;
+extern NSString *const VoiceRefresh;
+extern NSString *const VoiceRefreshFinish;

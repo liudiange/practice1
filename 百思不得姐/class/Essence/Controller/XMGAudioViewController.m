@@ -1,5 +1,5 @@
 //
-//  XMGAudioViewController.m
+//  XMGTopicTableController.m
 //  百思不得姐
 //
 //  Created by 刘殿阁 on 2017/11/10.
@@ -7,34 +7,47 @@
 //
 
 #import "XMGAudioViewController.h"
+#import "XMGTopicModel.h"
+
+
 
 @interface XMGAudioViewController ()
+
+@property (strong, nonatomic) XMGTopicModel *curModel;
 
 @end
 
 @implementation XMGAudioViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
-}
-#pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // 监听通知
+    [self addNotificaion];
     
-    return 50;
 }
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *Cell_ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell_ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell_ID];
-    }
-    cell.backgroundColor = XMG_RANDM_COLOR;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@---%zd",[self class],indexPath.row];
-    return cell;
+#pragma mark - 方法的响应
+/**
+ *
+ *  进行付值
+ */
+- (TopicType)type {
+    return TopicTypeVoice;
 }
-
+/**
+ *
+ *  监听通知
+ */
+- (void)addNotificaion {
+    @weakify(self);
+    //  刷新界面
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:VoiceRefreshFinish object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+}
 @end
+
+

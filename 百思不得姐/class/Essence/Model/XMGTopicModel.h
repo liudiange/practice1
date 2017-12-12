@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "XMGCommentModel.h"
 typedef NS_ENUM(NSUInteger,TopicType){
+    /** 全部*/
+    TopicTypeAll      = 1,
     /** 图片*/
     TopicTypePicture = 10,
     /** 段子*/
@@ -52,8 +54,21 @@ typedef NS_ENUM(NSUInteger,TopicType){
 @property (copy, nonatomic) NSString *large_image;
 /** 是不是gif图片*/
 @property (assign, nonatomic) BOOL is_gif;
+/** 播放的次数*/
+@property (nonatomic, assign) NSInteger playcount;
+/** 视频的总长*/
+@property (nonatomic, assign) NSInteger videotime;
+/** 声音的总长*/
+@property (nonatomic, assign) NSInteger voicetime;
+/** 视频的播放地址*/
+@property (nonatomic, copy) NSString *videourl;
+/** 音频的播放地址*/
+@property (nonatomic, copy) NSString *voiceurl;
 
 
+
+/** 是否需要播放音频*/
+@property (nonatomic, assign) BOOL isNeedPlayVoice;
 /** 是不是大图*/
 @property (nonatomic, assign) BOOL is_largeImage;
 /** cell的内容属性*/

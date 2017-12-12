@@ -12,3 +12,5 @@
 CGFloat const MarGen = 10;
 // 相关的宏定义
 NSString *const VideoPlay = @"videoPlaye";
+NSString *const VoiceRefresh = @"voiceRefresh";
+NSString *const VoiceRefreshFinish = @"voiceRefreshFinish";

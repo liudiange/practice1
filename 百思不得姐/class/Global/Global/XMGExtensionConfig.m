@@ -27,7 +27,9 @@
                   @"top_cmt" : @"top_cmt[0]",
                   @"small_image" : @"image0",
                   @"middle_image" : @"image2",
-                  @"large_image" : @"image1"
+                  @"large_image" : @"image1",
+                  @"videourl" : @"videouri",
+                  @"voiceurl" : @"voiceuri"
                  };
     }];
 }

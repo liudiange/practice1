@@ -68,7 +68,6 @@
  */
 - (void)setTopicModel:(XMGTopicModel *)topicModel {
     _topicModel = topicModel;
-    
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.profile_image] placeholderImage:[UIImage imageNamed:@"activities_black"]];
     self.nameLable.text = topicModel.name;
     self.timeLable.text = [self timeStr:topicModel.created_at];

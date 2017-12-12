@@ -44,7 +44,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *bottomScrollerView = [[UIScrollView alloc]initWithFrame:self.view.frame];
-    bottomScrollerView.backgroundColor = XMG_RANDM_COLOR;
+    bottomScrollerView.backgroundColor = XMG_BACKGROUND_COLOR;
     [self.view addSubview:bottomScrollerView];
     bottomScrollerView.delegate = self;
     self.bottomScrollerView = bottomScrollerView;

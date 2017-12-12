@@ -42,15 +42,17 @@
 		2C6DAE411FCBF1EB00F2077F /* 20171127151021208_migration.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DAE401FCBF1EB00F2077F /* 20171127151021208_migration.sql */; };
 		2C6DAE451FCBF75E00F2077F /* XMGMigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DAE441FCBF75E00F2077F /* XMGMigrationManager.m */; };
 		2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DAE461FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql */; };
+		2C7451B61FDA1E6B00425F70 /* XMGTopicTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7451B51FDA1E6B00425F70 /* XMGTopicTableController.m */; };
+		2C7451B81FDA27EE00425F70 /* XMGTopicVideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7451B71FDA27EE00425F70 /* XMGTopicVideoController.xib */; };
 		2C7A3C9A1F564C2400358CB9 /* XMGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A3C981F564C2400358CB9 /* XMGLoginViewController.m */; };
 		2C7A3C9B1F564C2400358CB9 /* XMGLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A3C991F564C2400358CB9 /* XMGLoginViewController.xib */; };
 		2C7A3C9F1F5651F300358CB9 /* XMGBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A3C9E1F5651F300358CB9 /* XMGBaseButton.m */; };
+		2C7A7DB81FDE576B00399419 /* XMGMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A7DB71FDE576B00399419 /* XMGMusicManager.m */; };
 		2C9769141FC26293005D5DE4 /* XMGRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9769131FC26293005D5DE4 /* XMGRefreshFooter.m */; };
 		2C9769171FC2663E005D5DE4 /* XMGTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9769161FC2663E005D5DE4 /* XMGTopicModel.m */; };
 		2CA8B2CF1FD7C75300AFF686 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B2CE1FD7C75300AFF686 /* XMGTopicVoiceView.m */; };
 		2CA8B2D31FD7C8C700AFF686 /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8B2D21FD7C8C700AFF686 /* XMGTopicVoiceView.xib */; };
 		2CA8B2D71FD7EEB600AFF686 /* XMGTopicVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B2D51FD7EEB600AFF686 /* XMGTopicVideoController.m */; };
-		2CA8B2D81FD7EEB600AFF686 /* XMGTopicVideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8B2D61FD7EEB600AFF686 /* XMGTopicVideoController.xib */; };
 		2CCE76111FD79AD1005E944A /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE76101FD79AD1005E944A /* XMGTopicPictureView.m */; };
 		2CCE76131FD79AE2005E944A /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE76121FD79AE2005E944A /* XMGTopicPictureView.xib */; };
 		2CCE76161FD7C025005E944A /* XMGTopicBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE76151FD7C025005E944A /* XMGTopicBaseView.m */; };
@@ -158,11 +160,16 @@
 		2C6DAE431FCBF75E00F2077F /* XMGMigrationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGMigrationManager.h; sourceTree = "<group>"; };
 		2C6DAE441FCBF75E00F2077F /* XMGMigrationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGMigrationManager.m; sourceTree = "<group>"; };
 		2C6DAE461FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 20171127180608562_migrationNew.sql; sourceTree = "<group>"; };
+		2C7451B41FDA1E6B00425F70 /* XMGTopicTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicTableController.h; sourceTree = "<group>"; };
+		2C7451B51FDA1E6B00425F70 /* XMGTopicTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopicTableController.m; sourceTree = "<group>"; };
+		2C7451B71FDA27EE00425F70 /* XMGTopicVideoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicVideoController.xib; sourceTree = "<group>"; };
 		2C7A3C971F564C2400358CB9 /* XMGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginViewController.h; sourceTree = "<group>"; };
 		2C7A3C981F564C2400358CB9 /* XMGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginViewController.m; sourceTree = "<group>"; };
 		2C7A3C991F564C2400358CB9 /* XMGLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginViewController.xib; sourceTree = "<group>"; };
 		2C7A3C9D1F5651F300358CB9 /* XMGBaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGBaseButton.h; sourceTree = "<group>"; };
 		2C7A3C9E1F5651F300358CB9 /* XMGBaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGBaseButton.m; sourceTree = "<group>"; };
+		2C7A7DB61FDE576B00399419 /* XMGMusicManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGMusicManager.h; sourceTree = "<group>"; };
+		2C7A7DB71FDE576B00399419 /* XMGMusicManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGMusicManager.m; sourceTree = "<group>"; };
 		2C9769121FC26293005D5DE4 /* XMGRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGRefreshFooter.h; sourceTree = "<group>"; };
 		2C9769131FC26293005D5DE4 /* XMGRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGRefreshFooter.m; sourceTree = "<group>"; };
 		2C9769151FC2663E005D5DE4 /* XMGTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicModel.h; sourceTree = "<group>"; };
@@ -173,7 +180,6 @@
 		2CA8B2D21FD7C8C700AFF686 /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
 		2CA8B2D41FD7EEB600AFF686 /* XMGTopicVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoController.h; sourceTree = "<group>"; };
 		2CA8B2D51FD7EEB600AFF686 /* XMGTopicVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoController.m; sourceTree = "<group>"; };
-		2CA8B2D61FD7EEB600AFF686 /* XMGTopicVideoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicVideoController.xib; sourceTree = "<group>"; };
 		2CCE760F1FD79AD1005E944A /* XMGTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
 		2CCE76101FD79AD1005E944A /* XMGTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
 		2CCE76121FD79AE2005E944A /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
@@ -376,6 +382,8 @@
 			children = (
 				2C4AAABC1FB3F41200CCCE97 /* XMGEssenceViewController.h */,
 				2C4AAABD1FB3F41200CCCE97 /* XMGEssenceViewController.m */,
+				2C7451B41FDA1E6B00425F70 /* XMGTopicTableController.h */,
+				2C7451B51FDA1E6B00425F70 /* XMGTopicTableController.m */,
 				2C5B826B1FB538230076A5A4 /* XMGAllViewController.h */,
 				2C5B826C1FB538230076A5A4 /* XMGAllViewController.m */,
 				2C5B826E1FB538480076A5A4 /* XMGVideoViewController.h */,
@@ -388,7 +396,7 @@
 				2C5B82781FB538890076A5A4 /* XMGWordViewController.m */,
 				2CA8B2D41FD7EEB600AFF686 /* XMGTopicVideoController.h */,
 				2CA8B2D51FD7EEB600AFF686 /* XMGTopicVideoController.m */,
-				2CA8B2D61FD7EEB600AFF686 /* XMGTopicVideoController.xib */,
+				2C7451B71FDA27EE00425F70 /* XMGTopicVideoController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -635,6 +643,8 @@
 			children = (
 				2C43552E1FC56D5E0015DB3F /* XMGGlobalTool.h */,
 				2C43552F1FC56D5E0015DB3F /* XMGGlobalTool.m */,
+				2C7A7DB61FDE576B00399419 /* XMGMusicManager.h */,
+				2C7A7DB71FDE576B00399419 /* XMGMusicManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -710,6 +720,7 @@
 				TargetAttributes = {
 					F10B9CE01EF0CD1800FF8BCE = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = SJ2F2TLP77;
 						ProvisioningStyle = Automatic;
 					};
 					F10B9CF91EF0CD1800FF8BCE = {
@@ -754,9 +765,9 @@
 				2C3C7C2B1FC3B9E300A5B3CB /* XMGTopicCell.xib in Resources */,
 				2C6DAE411FCBF1EB00F2077F /* 20171127151021208_migration.sql in Resources */,
 				2C7A3C9B1F564C2400358CB9 /* XMGLoginViewController.xib in Resources */,
-				2CA8B2D81FD7EEB600AFF686 /* XMGTopicVideoController.xib in Resources */,
 				2CCE761B1FD7C088005E944A /* XMGTopicVideoView.xib in Resources */,
 				2C53C4991F54F60F00C0D612 /* XMGFellowViewController.xib in Resources */,
+				2C7451B81FDA27EE00425F70 /* XMGTopicVideoController.xib in Resources */,
 				2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */,
 				F10B9CF11EF0CD1800FF8BCE /* Assets.xcassets in Resources */,
 				2CCE76131FD79AE2005E944A /* XMGTopicPictureView.xib in Resources */,
@@ -835,6 +846,7 @@
 				F1BDC5EC1F3226120020F91C /* XMGNewPostViewController.m in Sources */,
 				2C309BB21F3AE1B5003C0153 /* XMGNavigationController.m in Sources */,
 				2C313BA41FBD375700279AFB /* XMGNormalHeader.m in Sources */,
+				2C7451B61FDA1E6B00425F70 /* XMGTopicTableController.m in Sources */,
 				2C5B82731FB538640076A5A4 /* XMGAudioViewController.m in Sources */,
 				F1D050B81F08B0450038FDC1 /* AppDelegate.m in Sources */,
 				2C61E5691FD92C8000EE5EE5 /* HZImagesGroupView.m in Sources */,
@@ -846,6 +858,7 @@
 				2C078B911FCE86BB00750FC7 /* XMGCoreDataManager.m in Sources */,
 				2C61E56B1FD92C8000EE5EE5 /* HZPhotoBrowser.m in Sources */,
 				2C4355301FC56D5E0015DB3F /* XMGGlobalTool.m in Sources */,
+				2C7A7DB81FDE576B00399419 /* XMGMusicManager.m in Sources */,
 				F10459F71F2A42F200A7DB5F /* UIView+XMGVIew.m in Sources */,
 				F1D050B91F08B0450038FDC1 /* XMGTabBarController.m in Sources */,
 				2C3C7C2E1FC3D46900A5B3CB /* XMGSessionManager.m in Sources */,
@@ -1012,6 +1025,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = SJ2F2TLP77;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
@@ -1028,6 +1042,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = SJ2F2TLP77;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";

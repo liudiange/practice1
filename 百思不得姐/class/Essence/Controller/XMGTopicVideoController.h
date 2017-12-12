@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface XMGTopicVideoController : UIViewController
+/**
+ *
+ *   播放的url
+ */
+-(instancetype)initWithUrl:(NSString *)videoUrl;
 
 @end

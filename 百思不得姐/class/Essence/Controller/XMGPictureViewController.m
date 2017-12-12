@@ -15,25 +15,13 @@
 @implementation XMGPictureViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
+   
 }
-#pragma mark - Table view data source
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return 50;
+/**
+ *
+ *  返回所有的类型
+ */
+-(TopicType)type {
+    return TopicTypePicture;
 }
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *Cell_ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell_ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell_ID];
-    }
-    cell.backgroundColor = XMG_RANDM_COLOR;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@---%zd",[self class],indexPath.row];
-    return cell;
-}
-
 @end

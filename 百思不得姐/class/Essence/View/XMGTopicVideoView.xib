@@ -72,8 +72,8 @@
                 <outlet property="backImageView" destination="Vle-eq-jIo" id="ZAB-Z6-H6w"/>
                 <outlet property="iconPlayButton" destination="fPl-hN-dEP" id="A9C-zv-gcu"/>
                 <outlet property="progressView" destination="TE9-7R-im3" id="hVa-rX-nkB"/>
-                <outlet property="rightBottomLable" destination="JPC-mS-oNb" id="cbh-k3-dG7"/>
-                <outlet property="rightToplable" destination="gtp-2l-4JM" id="LEf-Hv-EoP"/>
+                <outlet property="rightBottomLable" destination="gtp-2l-4JM" id="C69-Bd-ZqH"/>
+                <outlet property="rightToplable" destination="JPC-mS-oNb" id="Zkk-Dy-gc6"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="124"/>
         </view>

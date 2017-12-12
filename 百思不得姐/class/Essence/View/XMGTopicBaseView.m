@@ -15,6 +15,9 @@
     
     //  去掉自动的约束，他默认会根据父试图变化 加上这个就不会变化了
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    
+    
 }
 
 @end

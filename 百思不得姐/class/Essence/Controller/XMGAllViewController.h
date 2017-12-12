@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMGTopicTableController.h"
 
-@interface XMGAllViewController : UITableViewController
+@interface XMGAllViewController : XMGTopicTableController
 
 @end

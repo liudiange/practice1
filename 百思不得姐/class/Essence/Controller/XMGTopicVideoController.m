@@ -13,29 +13,43 @@
 
 @property (strong, nonatomic)AVPlayer *player;
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
+@property (nonatomic, copy) NSString *playUrl;
+
 
 @end
 
 @implementation XMGTopicVideoController
 - (AVPlayer *)player {
     if (!_player) {
-        NSURL *url = [NSURL URLWithString:@"http://218.200.160.29/rdp2/test/mac/mv/mp4.do?mvid=600570YAT41&ua=Mac_sst&version=1.0&formatid=050014"];
+        NSURL *url = [NSURL URLWithString:self.playUrl];
         AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
-        _player = [[AVPlayer alloc] initWithPlayerItem:item];
+        self.player = [[AVPlayer alloc] initWithPlayerItem:item];
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
         self.playerLayer.frame = CGRectMake(0, 100, 375, 400);
         [self.view.layer addSublayer:self.playerLayer];
     }
     return _player;
 }
-
+/**
+ *
+ *   播放的url
+ */
+-(instancetype)initWithUrl:(NSString *)videoUrl {
+    if (self == [super init]) {
+        self.playUrl = videoUrl;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = XMG_BACKGROUND_COLOR;
+   
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.player play];
+    if (!NSStringIsNull(self.playUrl)) {
+        [self.player play];
+    }
 }
 /**
  *

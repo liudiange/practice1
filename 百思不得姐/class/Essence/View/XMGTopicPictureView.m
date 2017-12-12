@@ -33,6 +33,7 @@
     
     [super awakeFromNib];
     self.progressView.progressTintColor = [UIColor redColor];
+    self.progressView.progressLabel.font = [UIFont systemFontOfSize:12.0];
 }
 /**
  *
@@ -56,6 +57,7 @@
     
     [self.backImageView sd_setImageWithURL:[NSURL URLWithString:topicModel.small_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            self.changeBigButton.hidden = YES;
             CGFloat progress = 1.0 * receivedSize/expectedSize;
             if (progress <= 0) {
                 progress = 0.0;
@@ -63,7 +65,7 @@
             self.progressView.progress = progress;
             self.progressView.hidden = NO;
             self.progressView.roundedCorners = 5;
-            self.progressView.progressLabel.text = [NSString stringWithFormat:@"%0.2f%%",progress];
+            self.progressView.progressLabel.text = [NSString stringWithFormat:@"%0.0f%%",progress*100];
 
         });
     } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
