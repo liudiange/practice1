@@ -73,7 +73,7 @@
     self.timeLable.text = [self timeStr:topicModel.created_at];
     self.text_lable.text = topicModel.text;
     // 最新评论
-    if (topicModel.top_cmt) {
+    if (!NSStringIsNull(topicModel.top_cmt.content)) {
         self.commentView.hidden = NO;
         NSString *commentStr = [NSString stringWithFormat:@"%@ : %@",topicModel.top_cmt.user.username,topicModel.top_cmt.content];
         self.recentComment.text = commentStr;

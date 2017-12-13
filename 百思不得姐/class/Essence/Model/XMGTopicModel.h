@@ -22,6 +22,8 @@ typedef NS_ENUM(NSUInteger,TopicType){
 };
 
 @interface XMGTopicModel : NSObject
+/** id*/
+@property (nonatomic, copy) NSString *topicId;
 /** 标题头像*/
 @property (copy, nonatomic) NSString *profile_image;
 /** 标题*/
@@ -66,9 +68,6 @@ typedef NS_ENUM(NSUInteger,TopicType){
 @property (nonatomic, copy) NSString *voiceurl;
 
 
-
-/** 是否需要播放音频*/
-@property (nonatomic, assign) BOOL isNeedPlayVoice;
 /** 是不是大图*/
 @property (nonatomic, assign) BOOL is_largeImage;
 /** cell的内容属性*/

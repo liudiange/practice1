@@ -30,7 +30,6 @@
     [self setUpNav];
     [self setChildViewController];
     [self setBottomScrollerView];
-    
     [self setTitleScrollerView];
     
 }

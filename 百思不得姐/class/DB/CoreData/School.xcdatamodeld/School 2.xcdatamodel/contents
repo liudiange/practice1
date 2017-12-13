@@ -6,7 +6,42 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="XMGDBCommentModel" representedClassName="XMGDBCommentModel" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XMGDBUser" syncable="YES"/>
+    </entity>
+    <entity name="XMGDBTopicModel" representedClassName="XMGDBTopicModel" syncable="YES" codeGenerationType="class">
+        <attribute name="cai" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ding" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="is_gif" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="large_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="middle_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playcount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="profile_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="small_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topicId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="videotime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="videourl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voicetime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="voiceurl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="top_cmt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="XMGDBCommentModel" syncable="YES"/>
+    </entity>
+    <entity name="XMGDBUser" representedClassName="XMGDBUser" syncable="YES" codeGenerationType="class">
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Student" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="XMGDBCommentModel" positionX="-45" positionY="144" width="128" height="75"/>
+        <element name="XMGDBTopicModel" positionX="-63" positionY="9" width="128" height="375"/>
+        <element name="XMGDBUser" positionX="-36" positionY="153" width="128" height="75"/>
     </elements>
 </model>

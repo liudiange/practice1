@@ -29,7 +29,8 @@
                   @"middle_image" : @"image2",
                   @"large_image" : @"image1",
                   @"videourl" : @"videouri",
-                  @"voiceurl" : @"voiceuri"
+                  @"voiceurl" : @"voiceuri",
+                  @"topicId" : @"id"
                  };
     }];
 }
