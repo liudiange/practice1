@@ -26,6 +26,7 @@
 		2C4355301FC56D5E0015DB3F /* XMGGlobalTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C43552F1FC56D5E0015DB3F /* XMGGlobalTool.m */; };
 		2C4AAABE1FB3F41200CCCE97 /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AAABD1FB3F41200CCCE97 /* XMGEssenceViewController.m */; };
 		2C4AAAC11FB3F43B00CCCE97 /* XMGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AAAC01FB3F43B00CCCE97 /* XMGTitleButton.m */; };
+		2C51917F1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */; };
 		2C53C4991F54F60F00C0D612 /* XMGFellowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C53C4981F54F60F00C0D612 /* XMGFellowViewController.xib */; };
 		2C5B826D1FB538230076A5A4 /* XMGAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B826C1FB538230076A5A4 /* XMGAllViewController.m */; };
 		2C5B82701FB538480076A5A4 /* XMGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B826F1FB538480076A5A4 /* XMGVideoViewController.m */; };
@@ -53,6 +54,8 @@
 		2CA8B2CF1FD7C75300AFF686 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B2CE1FD7C75300AFF686 /* XMGTopicVoiceView.m */; };
 		2CA8B2D31FD7C8C700AFF686 /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA8B2D21FD7C8C700AFF686 /* XMGTopicVoiceView.xib */; };
 		2CA8B2D71FD7EEB600AFF686 /* XMGTopicVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B2D51FD7EEB600AFF686 /* XMGTopicVideoController.m */; };
+		2CB25EBC1FE12D830040C946 /* XMGPhotoWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB25EBA1FE12D830040C946 /* XMGPhotoWatchViewController.m */; };
+		2CB25EBD1FE12D830040C946 /* XMGPhotoWatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB25EBB1FE12D830040C946 /* XMGPhotoWatchViewController.xib */; };
 		2CCE76111FD79AD1005E944A /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE76101FD79AD1005E944A /* XMGTopicPictureView.m */; };
 		2CCE76131FD79AE2005E944A /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE76121FD79AE2005E944A /* XMGTopicPictureView.xib */; };
 		2CCE76161FD7C025005E944A /* XMGTopicBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE76151FD7C025005E944A /* XMGTopicBaseView.m */; };
@@ -131,6 +134,8 @@
 		2C4AAABD1FB3F41200CCCE97 /* XMGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceViewController.m; sourceTree = "<group>"; };
 		2C4AAABF1FB3F43B00CCCE97 /* XMGTitleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTitleButton.h; sourceTree = "<group>"; };
 		2C4AAAC01FB3F43B00CCCE97 /* XMGTitleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTitleButton.m; sourceTree = "<group>"; };
+		2C51917D1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+XMGGetCurrentController.h"; sourceTree = "<group>"; };
+		2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XMGGetCurrentController.m"; sourceTree = "<group>"; };
 		2C53C4981F54F60F00C0D612 /* XMGFellowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFellowViewController.xib; sourceTree = "<group>"; };
 		2C5B826B1FB538230076A5A4 /* XMGAllViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGAllViewController.h; sourceTree = "<group>"; };
 		2C5B826C1FB538230076A5A4 /* XMGAllViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGAllViewController.m; sourceTree = "<group>"; };
@@ -180,6 +185,9 @@
 		2CA8B2D21FD7C8C700AFF686 /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
 		2CA8B2D41FD7EEB600AFF686 /* XMGTopicVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoController.h; sourceTree = "<group>"; };
 		2CA8B2D51FD7EEB600AFF686 /* XMGTopicVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoController.m; sourceTree = "<group>"; };
+		2CB25EB91FE12D830040C946 /* XMGPhotoWatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGPhotoWatchViewController.h; sourceTree = "<group>"; };
+		2CB25EBA1FE12D830040C946 /* XMGPhotoWatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGPhotoWatchViewController.m; sourceTree = "<group>"; };
+		2CB25EBB1FE12D830040C946 /* XMGPhotoWatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGPhotoWatchViewController.xib; sourceTree = "<group>"; };
 		2CCE760F1FD79AD1005E944A /* XMGTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
 		2CCE76101FD79AD1005E944A /* XMGTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
 		2CCE76121FD79AE2005E944A /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
@@ -397,6 +405,9 @@
 				2CA8B2D41FD7EEB600AFF686 /* XMGTopicVideoController.h */,
 				2CA8B2D51FD7EEB600AFF686 /* XMGTopicVideoController.m */,
 				2C7451B71FDA27EE00425F70 /* XMGTopicVideoController.xib */,
+				2CB25EB91FE12D830040C946 /* XMGPhotoWatchViewController.h */,
+				2CB25EBA1FE12D830040C946 /* XMGPhotoWatchViewController.m */,
+				2CB25EBB1FE12D830040C946 /* XMGPhotoWatchViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -491,6 +502,8 @@
 				F1BDC5E81F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m */,
 				2C102CEE1FAFF4AD002B2720 /* NSString+XMGFileSize.h */,
 				2C102CEF1FAFF4AD002B2720 /* NSString+XMGFileSize.m */,
+				2C51917D1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.h */,
+				2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -768,6 +781,7 @@
 				2CCE761B1FD7C088005E944A /* XMGTopicVideoView.xib in Resources */,
 				2C53C4991F54F60F00C0D612 /* XMGFellowViewController.xib in Resources */,
 				2C7451B81FDA27EE00425F70 /* XMGTopicVideoController.xib in Resources */,
+				2CB25EBD1FE12D830040C946 /* XMGPhotoWatchViewController.xib in Resources */,
 				2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */,
 				F10B9CF11EF0CD1800FF8BCE /* Assets.xcassets in Resources */,
 				2CCE76131FD79AE2005E944A /* XMGTopicPictureView.xib in Resources */,
@@ -867,6 +881,7 @@
 				2C7A3C9F1F5651F300358CB9 /* XMGBaseButton.m in Sources */,
 				2C39BE8A1F8D10FF0024027A /* XMGBaseLoginTextfield.m in Sources */,
 				2C0DF0EF1F9EDB4C0060B31F /* XMGSetViewController.m in Sources */,
+				2CB25EBC1FE12D830040C946 /* XMGPhotoWatchViewController.m in Sources */,
 				2C5B82701FB538480076A5A4 /* XMGVideoViewController.m in Sources */,
 				2C4AAAC11FB3F43B00CCCE97 /* XMGTitleButton.m in Sources */,
 				2C61E56A1FD92C8000EE5EE5 /* HZIndicatorView.m in Sources */,
@@ -895,6 +910,7 @@
 				2C5B826D1FB538230076A5A4 /* XMGAllViewController.m in Sources */,
 				2C5B82761FB538780076A5A4 /* XMGPictureViewController.m in Sources */,
 				F10B9CE61EF0CD1800FF8BCE /* main.m in Sources */,
+				2C51917F1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m in Sources */,
 				2CFCFDC01FB1407300388112 /* XMGSetClearCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

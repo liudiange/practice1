@@ -237,10 +237,14 @@ static NSString * const TOPICId = @"topic";
             break;
         case TopicTypeVoice: // 播放声音
         {
-
+            //这个不在这处理了
         }
             break;
+        case TopicTypePicture: // 创建图片查看器
+        {
             
+        }
+            break;
         default:
             break;
     }
