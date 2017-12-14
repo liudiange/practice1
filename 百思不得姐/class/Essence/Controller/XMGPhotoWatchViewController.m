@@ -9,6 +9,7 @@
 #import "XMGPhotoWatchViewController.h"
 #import "DALabeledCircularProgressView.h"
 #import <Photos/Photos.h>
+#import <objc/message.h>
 
 @interface XMGPhotoWatchViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
@@ -43,6 +44,8 @@ static NSString *collectionTitle = @"百思不得姐的相簿";
     self.progressView.progressLabel.textColor = [UIColor redColor];
     self.progressView.progressTintColor = [UIColor greenColor];
     self.progressView.progressLabel.font = [UIFont systemFontOfSize:12.0];
+    
+    class_addMethod 
     
 }
 - (void)viewDidLoad {
