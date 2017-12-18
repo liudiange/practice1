@@ -10,6 +10,7 @@
 #import "XMGSetViewController.h"
 #import "XMGMeCell.h"
 #import "XMGFootView.h"
+#import "XMGSelectViewController.h"
 
 @interface XMGMeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -61,7 +62,9 @@
  * 点击了月亮
  */
 - (void)moonAction:(UIButton *)button {
-    XMGLOG(@"点击了月亮");
+    XMGSelectViewController *selectImageVc = [[XMGSelectViewController alloc] init];
+    [self.navigationController pushViewController:selectImageVc animated:YES];
+    
 }
 /**
  *

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="imageCell" id="gTV-IL-0wX" customClass="XMGImageCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TrE-RU-QOd">
+                        <rect key="frame" x="0.0" y="0.0" width="205" height="112"/>
+                    </imageView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1C-gc-xHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="205" height="112"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.4666095890410959" colorSpace="calibratedWhite"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foO-TH-XnN">
+                        <rect key="frame" x="172" y="80" width="33" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="选择">
+                            <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" title="选中了">
+                            <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="selectButtonAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="g7d-7B-TWM"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TrE-RU-QOd" secondAttribute="trailing" id="2hE-5M-0hB"/>
+                <constraint firstAttribute="bottom" secondItem="s1C-gc-xHZ" secondAttribute="bottom" id="69e-Je-dvV"/>
+                <constraint firstAttribute="bottom" secondItem="TrE-RU-QOd" secondAttribute="bottom" id="Ahp-6o-lJT"/>
+                <constraint firstAttribute="trailing" secondItem="foO-TH-XnN" secondAttribute="trailing" id="Ktd-0E-DhJ"/>
+                <constraint firstAttribute="trailing" secondItem="s1C-gc-xHZ" secondAttribute="trailing" id="MsE-MV-8LL"/>
+                <constraint firstAttribute="bottom" secondItem="foO-TH-XnN" secondAttribute="bottom" id="a8O-Zc-FWN"/>
+                <constraint firstItem="s1C-gc-xHZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fdr-Mu-0fs"/>
+                <constraint firstItem="TrE-RU-QOd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="map-TB-x5j"/>
+                <constraint firstItem="TrE-RU-QOd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oCB-oX-bnh"/>
+                <constraint firstItem="s1C-gc-xHZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zAN-jB-Wnn"/>
+            </constraints>
+            <size key="customSize" width="205" height="112"/>
+            <connections>
+                <outlet property="displayImageView" destination="TrE-RU-QOd" id="Kpb-mK-bvX"/>
+                <outlet property="markView" destination="s1C-gc-xHZ" id="Tx2-Rc-LxQ"/>
+                <outlet property="selectButton" destination="foO-TH-XnN" id="YWA-9M-hp2"/>
+            </connections>
+            <point key="canvasLocation" x="-38.5" y="-2"/>
+        </collectionViewCell>
+    </objects>
+</document>

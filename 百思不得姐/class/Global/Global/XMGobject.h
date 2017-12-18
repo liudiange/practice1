@@ -14,3 +14,5 @@ extern CGFloat const MarGen;
 extern NSString *const VideoPlay;
 extern NSString *const VoiceRefresh;
 extern NSString *const VoiceRefreshFinish;
+extern NSString *const ImageLableCount;
+extern NSString *const SureImage;

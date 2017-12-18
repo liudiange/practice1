@@ -11,6 +11,7 @@
 #import "XMGDBBase.h"
 #import "XMGMigrationManager.h"
 
+
 @interface AppDelegate ()
 
 
@@ -20,11 +21,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+
     // 可以自动升级
      [MagicalRecord setupAutoMigratingCoreDataStack];
-    
+
     //设置根控制器
     XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
     self.window.rootViewController = tabBarVc;

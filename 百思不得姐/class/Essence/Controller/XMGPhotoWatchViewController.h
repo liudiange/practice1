@@ -15,6 +15,10 @@
  *   创建控制器
  */
 - (instancetype)initWithDownloadUrl:(NSString *)downloadUrl;
-
+/**
+ *
+ *   通过image来进行创建
+ */
+- (instancetype)initWithImage:(UIImage *)image;
 
 @end

@@ -11,6 +11,7 @@
 #import <Photos/Photos.h>
 
 @interface XMGPhotoWatchViewController ()
+
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (nonatomic, strong) UIImage *downloadImage;
 @property (weak, nonatomic) IBOutlet UIImageView *displayImageView;
@@ -20,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstaton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstaton;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollerView;
-
 
 
 @end
@@ -37,7 +37,16 @@ static NSString *collectionTitle = @"百思不得姐的相簿";
     }
     return self;
 }
-
+/**
+ *
+ *   通过image来进行创建
+ */
+- (instancetype)initWithImage:(UIImage *)image {
+    if (self == [super init]) {
+        self.downloadImage = image;
+    }
+    return self;
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.progressView.progressLabel.textColor = [UIColor redColor];
@@ -47,41 +56,48 @@ static NSString *collectionTitle = @"百思不得姐的相簿";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 开始下载图片
-    @weakify(self);
-    [self.displayImageView sd_setImageWithURL:[NSURL URLWithString:self.downloadUrl] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        @strongify(self);
-        CGFloat progress = 1.0 * receivedSize/expectedSize;
-        if (progress <= 0) {
-            progress = 0.0;
-        }
-        self.progressView.progress = progress;
-        self.progressView.hidden = NO;
-        self.progressView.roundedCorners = 5;
-        self.progressView.progressLabel.text = [NSString stringWithFormat:@"%0.0f%%",progress*100];
-    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        @strongify(self);
-        self.progressView.hidden = YES;
-        self.progressView.roundedCorners = 0;
-        self.downloadImage = image;
-        if (image) {
-            self.saveButton.enabled = YES;
-        }
-        // 获得图片的宽和高的比例
-        CGFloat scale = 1.0*image.size.height/image.size.width;
-        CGFloat getHeight = ScreenWidth * scale;
-        dispatch_async(dispatch_get_main_queue(), ^{
+    if (!NSStringIsNull(self.downloadUrl)) {
+        // 开始下载图片
+        @weakify(self);
+        [self.displayImageView sd_setImageWithURL:[NSURL URLWithString:self.downloadUrl] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             @strongify(self);
-            self.heightConstaton.constant = getHeight;
-            if (getHeight > ScreenHeight) {
-                self.bottomConstaton.constant = 0;
-                self.scrollerView.contentSize = CGSizeMake(0, getHeight);
-            }else {
-                self.bottomConstaton.constant = (ScreenHeight - getHeight)/2.0;
-                self.topConstaton.constant = (ScreenHeight - getHeight)/2.0;
+            CGFloat progress = 1.0 * receivedSize/expectedSize;
+            if (progress <= 0) {
+                progress = 0.0;
             }
-        });
-    }];
+            self.progressView.progress = progress;
+            self.progressView.hidden = NO;
+            self.progressView.roundedCorners = 5;
+            self.progressView.progressLabel.text = [NSString stringWithFormat:@"%0.0f%%",progress*100];
+        } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            @strongify(self);
+            self.downloadImage = image;
+            [self updateImageSize];
+        }];
+    }else if (self.downloadImage){
+         [self updateImageSize];
+    }
+}
+- (void)updateImageSize {
+    self.progressView.hidden = YES;
+    self.progressView.roundedCorners = 0;
+    if (self.downloadImage) {
+        self.saveButton.enabled = YES;
+    }
+    // 获得图片的宽和高的比例
+    CGFloat scale = 1.0*self.downloadImage.size.height/self.downloadImage.size.width;
+    CGFloat getHeight = ScreenWidth * scale;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.heightConstaton.constant = getHeight;
+        if (getHeight > ScreenHeight) {
+            self.bottomConstaton.constant = 0;
+            self.scrollerView.contentSize = CGSizeMake(0, getHeight);
+        }else {
+            self.bottomConstaton.constant = (ScreenHeight - getHeight)/2.0;
+            self.topConstaton.constant = (ScreenHeight - getHeight)/2.0;
+        }
+    });
+    self.displayImageView.image = self.downloadImage;
 }
 /**
  *

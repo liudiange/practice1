@@ -51,6 +51,7 @@
 //    [browserVc show];
     
     XMGPhotoWatchViewController *photoWatchVc = [[XMGPhotoWatchViewController alloc] initWithDownloadUrl:self.currentModel.large_image];
+    photoWatchVc.hidesBottomBarWhenPushed = YES;
     [[self getCurrentVC] presentViewController:photoWatchVc animated:NO completion:nil];
     
 }

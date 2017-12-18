@@ -14,3 +14,5 @@ CGFloat const MarGen = 10;
 NSString *const VideoPlay = @"videoPlaye";
 NSString *const VoiceRefresh = @"voiceRefresh";
 NSString *const VoiceRefreshFinish = @"voiceRefreshFinish";
+NSString *const ImageLableCount = @"imageLableCount";
+NSString *const SureImage = @"sureImage";

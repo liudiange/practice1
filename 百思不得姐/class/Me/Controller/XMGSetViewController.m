@@ -9,6 +9,7 @@
 #import "XMGSetViewController.h"
 #import "XMGSetClearCell.h"
 
+
 @interface XMGSetViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) RACDisposable *dispose;
