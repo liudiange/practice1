@@ -37,12 +37,14 @@
         self.selectButton.selected = NO;
         self.markView.hidden = YES;
         _imageModel.isSelected = NO;
-        [[XMGImageManager shareManager].imageArray removeObject:self.displayImageView.image];
+        [[XMGImageManager shareManager].smallImageArray removeObject:_imageModel.smallImage];
+        [[XMGImageManager shareManager].bigImageArray removeObject:_imageModel.bigImage];
     }else {
         self.selectButton.selected = YES;
         self.markView.hidden = NO;
-        [[XMGImageManager shareManager].imageArray addObject:self.displayImageView.image];
         _imageModel.isSelected = YES;
+         [[XMGImageManager shareManager].smallImageArray addObject:_imageModel.smallImage];
+         [[XMGImageManager shareManager].bigImageArray addObject:_imageModel.bigImage];
     }
     // 发出通知显示下边的lable
     [[NSNotificationCenter defaultCenter] postNotificationName:ImageLableCount object:nil];

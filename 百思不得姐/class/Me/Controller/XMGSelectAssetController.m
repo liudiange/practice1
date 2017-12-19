@@ -11,6 +11,8 @@
 #import "XMGImageManager.h"
 #import "XMGSelectViewController.h"
 #import "XMGPhotoWatchViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+
 
 
 @interface XMGSelectAssetController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -49,15 +51,22 @@ static NSString *Image_cell = @"imageCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 开始组装数据
-    [self getData];
-    // 创建collectionview
+    //  创建collectionview
     [self setUpCollection];
     //  晴空数据
-    [[XMGImageManager shareManager].imageArray removeAllObjects];
-    //  监听通知
+    [self clearData];
+    //  开始组装数据
+    [self getData];
+    //  添加通知
     [self addNotification];
 }
+- (void)clearData {
+    
+    [[XMGImageManager shareManager].smallImageArray removeAllObjects];
+    [[XMGImageManager shareManager].bigImageArray removeAllObjects];
+    
+}
+
 /**
  *
  *  确定图片的按钮
@@ -84,9 +93,9 @@ static NSString *Image_cell = @"imageCell";
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:ImageLableCount object:nil] subscribeNext:^(NSNotification * _Nullable x) {
         @strongify(self);
         dispatch_async(dispatch_get_main_queue(), ^{
-            if ([XMGImageManager shareManager].imageArray.count) {
+            if ([XMGImageManager shareManager].smallImageArray.count) {
                 self.bottomLableConstaton.constant = 0;
-                self.countLable.text = [NSString stringWithFormat:@"已经选中:%zd",[XMGImageManager shareManager].imageArray.count];
+                self.countLable.text = [NSString stringWithFormat:@"已经选中:%zd",[XMGImageManager shareManager].smallImageArray.count];
             }else {
                 self.bottomLableConstaton.constant = -20;
             }
@@ -98,35 +107,43 @@ static NSString *Image_cell = @"imageCell";
  *  开始组装数据
  */
 - (void)getData {
-    
-    PHFetchOptions *options = [[PHFetchOptions alloc] init];
-    options.isAccessibilityElement = YES;
-    PHFetchResult<PHAsset *> *assetArray = [PHAsset fetchAssetsInAssetCollection:self.collection options:options];
-    
-    PHImageRequestOptions *imageOption = [[PHImageRequestOptions alloc] init];
-     imageOption.synchronous = YES;
-    // 特别说明 imageOption.synchronous = YES 和 CGSizeMake(asset.pixelWidth, asset.pixelHeight) 返回的是原图
-    // 特别说明 imageOption.synchronous = YES 和 CGSizeZero 返回的是缩略图
-    // 特别说明 imageOption.synchronous = NO 和 CGSizeMake(asset.pixelWidth, asset.pixelHeight) 原图和缩略图都返回
-    // 特别说明 imageOption.synchronous = NO 和 CGSizeZero 返回的是缩略图
-   
-    for (PHAsset *asset in assetArray) {
-        //这个方法是同步执行的
-        __block UIImage *smallImage = nil;
-        __block UIImage *bigImage = nil;
-        [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeZero contentMode:PHImageContentModeAspectFit options:imageOption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            smallImage = result;
-        }];
+    [SVProgressHUD showWithStatus:@"正在加载中----"];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        PHFetchOptions *options = [[PHFetchOptions alloc] init];
+        options.isAccessibilityElement = YES;
+        PHFetchResult<PHAsset *> *assetArray = [PHAsset fetchAssetsInAssetCollection:self.collection options:options];
+        PHImageRequestOptions *imageOption = [[PHImageRequestOptions alloc] init];
+        imageOption.synchronous = YES;
+        // 特别说明 imageOption.synchronous = YES 和 CGSizeMake(asset.pixelWidth, asset.pixelHeight) 返回的是原图
+        // 特别说明 imageOption.synchronous = YES 和 CGSizeZero 返回的是缩略图
+        // 特别说明 imageOption.synchronous = NO 和 CGSizeMake(asset.pixelWidth, asset.pixelHeight) 原图和缩略图都返回
+        // 特别说明 imageOption.synchronous = NO 和 CGSizeZero 返回的是缩略图
         
-        [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(asset.pixelWidth, asset.pixelHeight) contentMode:PHImageContentModeAspectFit options:imageOption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            bigImage = result;
-        }];
-        XMGImageModel *modle = [[XMGImageModel alloc] init];
-        modle.smallImage = smallImage;
-        modle.bigImage = bigImage;
-        modle.isSelected = NO;
-        [self.dataArray addObject:modle];
-    }
+        for (PHAsset *asset in assetArray) {
+            //这个方法是同步执行的
+            __block UIImage *smallImage = nil;
+            __block UIImage *bigImage = nil;
+            [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeZero contentMode:PHImageContentModeAspectFit options:imageOption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+                smallImage = result;
+            }];
+            
+            [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(asset.pixelWidth, asset.pixelHeight) contentMode:PHImageContentModeAspectFit options:imageOption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+                bigImage = result;
+            }];
+            XMGImageModel *modle = [[XMGImageModel alloc] init];
+            modle.smallImage = smallImage;
+            modle.bigImage = bigImage;
+            modle.isSelected = NO;
+            [self.dataArray addObject:modle];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [SVProgressHUD dismiss];
+            // 刷新界面
+            [self.collectionView reloadData];
+        });
+    });
 }
 /**
  *
@@ -143,8 +160,7 @@ static NSString *Image_cell = @"imageCell";
     self.collectionView.collectionViewLayout = flowLayout;
     // 注册cell
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGImageCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:Image_cell];
-    // 刷新界面
-    [self.collectionView reloadData];
+    
 }
 
 #pragma mark - collection - datasource
@@ -158,10 +174,9 @@ static NSString *Image_cell = @"imageCell";
 }
 #pragma mark - delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    XMGImageModel *imageModel = self.dataArray[indexPath.item];    
+    XMGImageModel *imageModel = self.dataArray[indexPath.item];
     XMGPhotoWatchViewController *watchVc = [[XMGPhotoWatchViewController alloc] initWithImage:imageModel.bigImage];
     [self presentViewController:watchVc animated:YES completion:nil];
 }
-
 
 @end

@@ -40,7 +40,7 @@
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:SureImage object:nil] subscribeNext:^(NSNotification * _Nullable x) {
         @strongify(self);
         dispatch_async(dispatch_get_main_queue(), ^{
-           self.displayImageView.image = [[XMGImageManager shareManager].imageArray firstObject];
+           self.displayImageView.image = [[XMGImageManager shareManager].bigImageArray firstObject];
         });
         
     }];

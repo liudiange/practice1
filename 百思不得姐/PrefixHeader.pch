@@ -41,6 +41,9 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "UIImageView+WebCache.h"
 #import "NSObject+XMGGetCurrentController.h"
+#import "UIImage+XMGCategory.h"
+#import "UIImageView+XMGCategory.h"
+
 
 
 #endif

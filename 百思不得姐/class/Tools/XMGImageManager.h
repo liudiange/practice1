@@ -15,6 +15,7 @@
  */
 +(instancetype)shareManager;
 /** 当前的image*/
-@property (nonatomic, strong) NSMutableArray *imageArray;
-
+@property (nonatomic, strong) NSMutableArray *smallImageArray;
+/** 当前的image*/
+@property (nonatomic, strong) NSMutableArray *bigImageArray;
 @end

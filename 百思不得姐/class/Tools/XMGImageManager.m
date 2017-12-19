@@ -23,11 +23,18 @@
     return _manager;
 }
 
-- (NSMutableArray *)imageArray {
-    if (!_imageArray) {
-        _imageArray = [NSMutableArray array];
+- (NSMutableArray *)smallImageArray {
+    if (!_smallImageArray) {
+        _smallImageArray = [NSMutableArray array];
     }
-    return _imageArray;
+    return _smallImageArray;
 }
+- (NSMutableArray *)bigImageArray {
+    if (!_bigImageArray) {
+        _bigImageArray = [NSMutableArray array];
+    }
+    return _bigImageArray;
+}
+
 
 @end

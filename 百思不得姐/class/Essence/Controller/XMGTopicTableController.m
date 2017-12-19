@@ -97,7 +97,7 @@ static NSString * const TOPICId = @"topic";
         parma[@"a"] = @"list";
         parma[@"c"] = @"data";
         parma[@"type"] = @(self.type);
-        [XMGSessionManager.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+        [XMGSessionManager.manager GET:GetEssenceData parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
             @strongify(self);
             self.maxTime = responseObject[@"info"][@"maxtime"];
             self.dataArray = [XMGTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -129,7 +129,7 @@ static NSString * const TOPICId = @"topic";
             parma[@"c"] = @"data";
             parma[@"maxtime"] = self.maxTime;
             parma[@"type"] = @(self.type);
-            [XMGSessionManager.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+            [XMGSessionManager.manager GET:GetEssenceData parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
                 @strongify(self);
                 self.maxTime = responseObject[@"info"][@"maxtime"];
                 NSArray *array = [XMGTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];

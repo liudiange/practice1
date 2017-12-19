@@ -41,6 +41,13 @@
 		2C61E56E1FD92C8000EE5EE5 /* HZPhotoItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C61E5461FD92C7F00EE5EE5 /* HZPhotoItemModel.m */; };
 		2C6328BA1FC7C2450075BFA2 /* XMGDBBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6328B91FC7C2450075BFA2 /* XMGDBBase.m */; };
 		2C6384901FE75BD00025CAE7 /* XMGImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63848F1FE75BD00025CAE7 /* XMGImageModel.m */; };
+		2C6384941FE769AF0025CAE7 /* XMGsubscribeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6384921FE769AF0025CAE7 /* XMGsubscribeController.m */; };
+		2C6384951FE769AF0025CAE7 /* XMGsubscribeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6384931FE769AF0025CAE7 /* XMGsubscribeController.xib */; };
+		2C6384981FE797250025CAE7 /* XMGSubscribeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6384971FE797250025CAE7 /* XMGSubscribeModel.m */; };
+		2C63849C1FE79B5F0025CAE7 /* XMGSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63849A1FE79B5F0025CAE7 /* XMGSubscribeCell.m */; };
+		2C63849D1FE79B5F0025CAE7 /* XMGSubscribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C63849B1FE79B5F0025CAE7 /* XMGSubscribeCell.xib */; };
+		2C6384A01FE7B41F0025CAE7 /* UIImage+XMGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63849F1FE7B41F0025CAE7 /* UIImage+XMGCategory.m */; };
+		2C6384A31FE7BC750025CAE7 /* UIImageView+XMGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6384A21FE7BC750025CAE7 /* UIImageView+XMGCategory.m */; };
 		2C6DAE411FCBF1EB00F2077F /* 20171127151021208_migration.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DAE401FCBF1EB00F2077F /* 20171127151021208_migration.sql */; };
 		2C6DAE451FCBF75E00F2077F /* XMGMigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6DAE441FCBF75E00F2077F /* XMGMigrationManager.m */; };
 		2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DAE461FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql */; };
@@ -173,6 +180,18 @@
 		2C6328B91FC7C2450075BFA2 /* XMGDBBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGDBBase.m; sourceTree = "<group>"; };
 		2C63848E1FE75BD00025CAE7 /* XMGImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGImageModel.h; sourceTree = "<group>"; };
 		2C63848F1FE75BD00025CAE7 /* XMGImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGImageModel.m; sourceTree = "<group>"; };
+		2C6384911FE769AF0025CAE7 /* XMGsubscribeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGsubscribeController.h; sourceTree = "<group>"; };
+		2C6384921FE769AF0025CAE7 /* XMGsubscribeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGsubscribeController.m; sourceTree = "<group>"; };
+		2C6384931FE769AF0025CAE7 /* XMGsubscribeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGsubscribeController.xib; sourceTree = "<group>"; };
+		2C6384961FE797250025CAE7 /* XMGSubscribeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubscribeModel.h; sourceTree = "<group>"; };
+		2C6384971FE797250025CAE7 /* XMGSubscribeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubscribeModel.m; sourceTree = "<group>"; };
+		2C6384991FE79B5F0025CAE7 /* XMGSubscribeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubscribeCell.h; sourceTree = "<group>"; };
+		2C63849A1FE79B5F0025CAE7 /* XMGSubscribeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubscribeCell.m; sourceTree = "<group>"; };
+		2C63849B1FE79B5F0025CAE7 /* XMGSubscribeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGSubscribeCell.xib; sourceTree = "<group>"; };
+		2C63849E1FE7B41F0025CAE7 /* UIImage+XMGCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+XMGCategory.h"; sourceTree = "<group>"; };
+		2C63849F1FE7B41F0025CAE7 /* UIImage+XMGCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XMGCategory.m"; sourceTree = "<group>"; };
+		2C6384A11FE7BC750025CAE7 /* UIImageView+XMGCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XMGCategory.h"; sourceTree = "<group>"; };
+		2C6384A21FE7BC750025CAE7 /* UIImageView+XMGCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XMGCategory.m"; sourceTree = "<group>"; };
 		2C6DAE401FCBF1EB00F2077F /* 20171127151021208_migration.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 20171127151021208_migration.sql; sourceTree = "<group>"; };
 		2C6DAE431FCBF75E00F2077F /* XMGMigrationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGMigrationManager.h; sourceTree = "<group>"; };
 		2C6DAE441FCBF75E00F2077F /* XMGMigrationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGMigrationManager.m; sourceTree = "<group>"; };
@@ -398,6 +417,8 @@
 				2CE2E4261FD4E58500E9314C /* XMGCommentModel.m */,
 				2CE2E4281FD4E59500E9314C /* XMGUserModel.h */,
 				2CE2E4291FD4E59500E9314C /* XMGUserModel.m */,
+				2C6384961FE797250025CAE7 /* XMGSubscribeModel.h */,
+				2C6384971FE797250025CAE7 /* XMGSubscribeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -421,6 +442,9 @@
 				2CA8B2CD1FD7C75300AFF686 /* XMGTopicVoiceView.h */,
 				2CA8B2CE1FD7C75300AFF686 /* XMGTopicVoiceView.m */,
 				2CA8B2D21FD7C8C700AFF686 /* XMGTopicVoiceView.xib */,
+				2C6384991FE79B5F0025CAE7 /* XMGSubscribeCell.h */,
+				2C63849A1FE79B5F0025CAE7 /* XMGSubscribeCell.m */,
+				2C63849B1FE79B5F0025CAE7 /* XMGSubscribeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +472,9 @@
 				2CB25EB91FE12D830040C946 /* XMGPhotoWatchViewController.h */,
 				2CB25EBA1FE12D830040C946 /* XMGPhotoWatchViewController.m */,
 				2CB25EBB1FE12D830040C946 /* XMGPhotoWatchViewController.xib */,
+				2C6384911FE769AF0025CAE7 /* XMGsubscribeController.h */,
+				2C6384921FE769AF0025CAE7 /* XMGsubscribeController.m */,
+				2C6384931FE769AF0025CAE7 /* XMGsubscribeController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -544,6 +571,10 @@
 				2C102CEF1FAFF4AD002B2720 /* NSString+XMGFileSize.m */,
 				2C51917D1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.h */,
 				2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */,
+				2C63849E1FE7B41F0025CAE7 /* UIImage+XMGCategory.h */,
+				2C63849F1FE7B41F0025CAE7 /* UIImage+XMGCategory.m */,
+				2C6384A11FE7BC750025CAE7 /* UIImageView+XMGCategory.h */,
+				2C6384A21FE7BC750025CAE7 /* UIImageView+XMGCategory.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -824,8 +855,10 @@
 				2CCE761B1FD7C088005E944A /* XMGTopicVideoView.xib in Resources */,
 				2C53C4991F54F60F00C0D612 /* XMGFellowViewController.xib in Resources */,
 				2C7451B81FDA27EE00425F70 /* XMGTopicVideoController.xib in Resources */,
+				2C63849D1FE79B5F0025CAE7 /* XMGSubscribeCell.xib in Resources */,
 				2CB25EBD1FE12D830040C946 /* XMGPhotoWatchViewController.xib in Resources */,
 				2CC61F101FE3729100406A07 /* XMGSelectViewController.xib in Resources */,
+				2C6384951FE769AF0025CAE7 /* XMGsubscribeController.xib in Resources */,
 				2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */,
 				F10B9CF11EF0CD1800FF8BCE /* Assets.xcassets in Resources */,
 				2CC61F151FE3AF2C00406A07 /* XMGSelectCollectionController.xib in Resources */,
@@ -908,10 +941,12 @@
 				2C313BA41FBD375700279AFB /* XMGNormalHeader.m in Sources */,
 				2C7451B61FDA1E6B00425F70 /* XMGTopicTableController.m in Sources */,
 				2C5B82731FB538640076A5A4 /* XMGAudioViewController.m in Sources */,
+				2C6384A31FE7BC750025CAE7 /* UIImageView+XMGCategory.m in Sources */,
 				F1D050B81F08B0450038FDC1 /* AppDelegate.m in Sources */,
 				2C61E5691FD92C8000EE5EE5 /* HZImagesGroupView.m in Sources */,
 				2C102CF01FAFF4AD002B2720 /* NSString+XMGFileSize.m in Sources */,
 				2CCE76111FD79AD1005E944A /* XMGTopicPictureView.m in Sources */,
+				2C6384941FE769AF0025CAE7 /* XMGsubscribeController.m in Sources */,
 				2CCE76191FD7C078005E944A /* XMGTopicVideoView.m in Sources */,
 				2C0DF0E61F9ED8760060B31F /* XMGobject.m in Sources */,
 				2C078B941FCE8E9B00750FC7 /* School.xcdatamodeld in Sources */,
@@ -937,6 +972,7 @@
 				2CCE76161FD7C025005E944A /* XMGTopicBaseView.m in Sources */,
 				2C9769171FC2663E005D5DE4 /* XMGTopicModel.m in Sources */,
 				2C0DF0E21F9ED74C0060B31F /* UITextField+XMGTextField.m in Sources */,
+				2C6384981FE797250025CAE7 /* XMGSubscribeModel.m in Sources */,
 				2CE2E42A1FD4E59500E9314C /* XMGUserModel.m in Sources */,
 				F1BDC5EF1F3226E30020F91C /* XMGFellowViewController.m in Sources */,
 				2C1093811FA6BD62004D24F3 /* XMGFootView.m in Sources */,
@@ -952,6 +988,7 @@
 				2CA8B2D71FD7EEB600AFF686 /* XMGTopicVideoController.m in Sources */,
 				2C0DF0F21F9EDB720060B31F /* XMGMeCell.m in Sources */,
 				F1D050BC1F08B0890038FDC1 /* XMGTabBar.m in Sources */,
+				2C6384A01FE7B41F0025CAE7 /* UIImage+XMGCategory.m in Sources */,
 				F1BDC5E91F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m in Sources */,
 				2CA8B2CF1FD7C75300AFF686 /* XMGTopicVoiceView.m in Sources */,
 				2C0DF0EE1F9EDB4C0060B31F /* XMGMeViewController.m in Sources */,
@@ -960,6 +997,7 @@
 				2C61E56E1FD92C8000EE5EE5 /* HZPhotoItemModel.m in Sources */,
 				2C5B826D1FB538230076A5A4 /* XMGAllViewController.m in Sources */,
 				2C5B82761FB538780076A5A4 /* XMGPictureViewController.m in Sources */,
+				2C63849C1FE79B5F0025CAE7 /* XMGSubscribeCell.m in Sources */,
 				F10B9CE61EF0CD1800FF8BCE /* main.m in Sources */,
 				2C51917F1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m in Sources */,
 				2CFCFDC01FB1407300388112 /* XMGSetClearCell.m in Sources */,

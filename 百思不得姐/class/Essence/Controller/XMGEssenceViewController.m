@@ -13,6 +13,8 @@
 #import "XMGAudioViewController.h"
 #import "XMGVideoViewController.h"
 #import "XMGPictureViewController.h"
+#import "XMGsubscribeController.h"
+
 
 @interface XMGEssenceViewController ()<UIScrollViewDelegate>
 
@@ -153,15 +155,14 @@
     point.x = index * self.bottomScrollerView.xmg_width;
     [self.bottomScrollerView setContentOffset:point animated:YES];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"123456" object:nil];
-    
 }
 /**
  *
- *  做上脚按钮的点击
+ *  左上角按钮的点击
  */
 - (void)buttonAction {
-    
+    XMGsubscribeController *subscribeVc = [[XMGsubscribeController alloc] init];
+    [self.navigationController pushViewController:subscribeVc animated:YES];
 }
 /**
  *

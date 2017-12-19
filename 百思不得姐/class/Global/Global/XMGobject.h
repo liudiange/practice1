@@ -16,3 +16,4 @@ extern NSString *const VoiceRefresh;
 extern NSString *const VoiceRefreshFinish;
 extern NSString *const ImageLableCount;
 extern NSString *const SureImage;
+extern NSString *const GetEssenceData;
