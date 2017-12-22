@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface XMGUserModel : NSObject
+
 /** 名字*/
 @property (nonatomic, copy) NSString *username;
 /** id*/
 @property (nonatomic, copy) NSString *userId;
+/** 用户的头像*/
+@property (nonatomic, copy) NSString *profile_image;
+/** 用户的性别*/
+@property (nonatomic, copy) NSString *sex;
+
 
 @end

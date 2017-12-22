@@ -10,6 +10,7 @@
 
 // 全局的内边距
 CGFloat const MarGen = 10;
+CGFloat const SmallMarGen = 5;
 // 相关的宏定义
 NSString *const VideoPlay = @"videoPlaye";
 NSString *const VoiceRefresh = @"voiceRefresh";

@@ -17,6 +17,7 @@
 #import "XMGTopicVideoController.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import <CoreData/CoreData.h>
+#import "XMGDetailController.h"
 
 
 
@@ -43,15 +44,14 @@ static NSString * const TOPICId = @"topic";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 初始化tableveiw
+    //  初始化tableveiw
     [self setUpTableView];
     //  下拉刷新
     [self setRefresh];
     //  下拉加载更多
     [self loadMore];
-    // 监听通知
+    //  监听通知
     [self addNotificaion];
-    
 }
 #pragma mark - 方法的响应
 /**
@@ -83,7 +83,6 @@ static NSString * const TOPICId = @"topic";
         @strongify(self);
         [self creatOperationVc:model];
     }];
-    
 }
 /**
  *
@@ -112,7 +111,6 @@ static NSString * const TOPICId = @"topic";
     }];
     self.tableView.mj_header = normalHeader;
     [self.tableView.mj_header beginRefreshing];
-    
 }
 /**
  *
@@ -149,16 +147,19 @@ static NSString * const TOPICId = @"topic";
     self.tableView.mj_footer = freshFooter;
 }
 #pragma mark - table - delegate
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     XMGTopicModel *model = self.dataArray[indexPath.row];
-    [self creatOperationVc:model];
-    
+    XMGDetailController *detailVc = [[XMGDetailController alloc] initWithModel:model];
+    [self.navigationController pushViewController:detailVc animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     XMGTopicModel *model = self.dataArray[indexPath.row];
     return model.cellHeight;
 }
+
+
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     

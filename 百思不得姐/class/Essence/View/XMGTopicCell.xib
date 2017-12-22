@@ -169,7 +169,7 @@
                 <outlet property="text_lable" destination="1ci-OJ-Wgg" id="wlf-Z9-lHC"/>
                 <outlet property="timeLable" destination="gVB-yK-MhE" id="gqn-Af-uoT"/>
             </connections>
-            <point key="canvasLocation" x="98" y="-59"/>
+            <point key="canvasLocation" x="-206" y="-70"/>
         </tableViewCell>
     </objects>
     <resources>

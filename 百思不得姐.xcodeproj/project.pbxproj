@@ -28,6 +28,9 @@
 		2C4AAAC11FB3F43B00CCCE97 /* XMGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AAAC01FB3F43B00CCCE97 /* XMGTitleButton.m */; };
 		2C51917F1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */; };
 		2C53C4991F54F60F00C0D612 /* XMGFellowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C53C4981F54F60F00C0D612 /* XMGFellowViewController.xib */; };
+		2C5A28E61FEB598A008BF226 /* XMGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A28E51FEB598A008BF226 /* XMGCommentHeaderView.m */; };
+		2C5A28EA1FEB8E4D008BF226 /* XMGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A28E81FEB8E4D008BF226 /* XMGCommentCell.m */; };
+		2C5A28EB1FEB8E4D008BF226 /* XMGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A28E91FEB8E4D008BF226 /* XMGCommentCell.xib */; };
 		2C5B826D1FB538230076A5A4 /* XMGAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B826C1FB538230076A5A4 /* XMGAllViewController.m */; };
 		2C5B82701FB538480076A5A4 /* XMGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B826F1FB538480076A5A4 /* XMGVideoViewController.m */; };
 		2C5B82731FB538640076A5A4 /* XMGAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B82721FB538640076A5A4 /* XMGAudioViewController.m */; };
@@ -78,6 +81,8 @@
 		2CCE76161FD7C025005E944A /* XMGTopicBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE76151FD7C025005E944A /* XMGTopicBaseView.m */; };
 		2CCE76191FD7C078005E944A /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE76181FD7C078005E944A /* XMGTopicVideoView.m */; };
 		2CCE761B1FD7C088005E944A /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE761A1FD7C088005E944A /* XMGTopicVideoView.xib */; };
+		2CCF0E221FEA070300D75FEE /* XMGDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF0E201FEA070300D75FEE /* XMGDetailController.m */; };
+		2CCF0E231FEA070300D75FEE /* XMGDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF0E211FEA070300D75FEE /* XMGDetailController.xib */; };
 		2CE2E4271FD4E58500E9314C /* XMGCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2E4261FD4E58500E9314C /* XMGCommentModel.m */; };
 		2CE2E42A1FD4E59500E9314C /* XMGUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2E4291FD4E59500E9314C /* XMGUserModel.m */; };
 		2CE2E42D1FD4EDB400E9314C /* XMGExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2E42C1FD4EDB400E9314C /* XMGExtensionConfig.m */; };
@@ -154,6 +159,11 @@
 		2C51917D1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+XMGGetCurrentController.h"; sourceTree = "<group>"; };
 		2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XMGGetCurrentController.m"; sourceTree = "<group>"; };
 		2C53C4981F54F60F00C0D612 /* XMGFellowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFellowViewController.xib; sourceTree = "<group>"; };
+		2C5A28E41FEB598A008BF226 /* XMGCommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGCommentHeaderView.h; sourceTree = "<group>"; };
+		2C5A28E51FEB598A008BF226 /* XMGCommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGCommentHeaderView.m; sourceTree = "<group>"; };
+		2C5A28E71FEB8E4D008BF226 /* XMGCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGCommentCell.h; sourceTree = "<group>"; };
+		2C5A28E81FEB8E4D008BF226 /* XMGCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGCommentCell.m; sourceTree = "<group>"; };
+		2C5A28E91FEB8E4D008BF226 /* XMGCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGCommentCell.xib; sourceTree = "<group>"; };
 		2C5B826B1FB538230076A5A4 /* XMGAllViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGAllViewController.h; sourceTree = "<group>"; };
 		2C5B826C1FB538230076A5A4 /* XMGAllViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGAllViewController.m; sourceTree = "<group>"; };
 		2C5B826E1FB538480076A5A4 /* XMGVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGVideoViewController.h; sourceTree = "<group>"; };
@@ -241,6 +251,9 @@
 		2CCE76171FD7C078005E944A /* XMGTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
 		2CCE76181FD7C078005E944A /* XMGTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
 		2CCE761A1FD7C088005E944A /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
+		2CCF0E1F1FEA070300D75FEE /* XMGDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGDetailController.h; sourceTree = "<group>"; };
+		2CCF0E201FEA070300D75FEE /* XMGDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGDetailController.m; sourceTree = "<group>"; };
+		2CCF0E211FEA070300D75FEE /* XMGDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGDetailController.xib; sourceTree = "<group>"; };
 		2CE2E4251FD4E58500E9314C /* XMGCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGCommentModel.h; sourceTree = "<group>"; };
 		2CE2E4261FD4E58500E9314C /* XMGCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGCommentModel.m; sourceTree = "<group>"; };
 		2CE2E4281FD4E59500E9314C /* XMGUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGUserModel.h; sourceTree = "<group>"; };
@@ -445,6 +458,11 @@
 				2C6384991FE79B5F0025CAE7 /* XMGSubscribeCell.h */,
 				2C63849A1FE79B5F0025CAE7 /* XMGSubscribeCell.m */,
 				2C63849B1FE79B5F0025CAE7 /* XMGSubscribeCell.xib */,
+				2C5A28E41FEB598A008BF226 /* XMGCommentHeaderView.h */,
+				2C5A28E51FEB598A008BF226 /* XMGCommentHeaderView.m */,
+				2C5A28E71FEB8E4D008BF226 /* XMGCommentCell.h */,
+				2C5A28E81FEB8E4D008BF226 /* XMGCommentCell.m */,
+				2C5A28E91FEB8E4D008BF226 /* XMGCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +493,9 @@
 				2C6384911FE769AF0025CAE7 /* XMGsubscribeController.h */,
 				2C6384921FE769AF0025CAE7 /* XMGsubscribeController.m */,
 				2C6384931FE769AF0025CAE7 /* XMGsubscribeController.xib */,
+				2CCF0E1F1FEA070300D75FEE /* XMGDetailController.h */,
+				2CCF0E201FEA070300D75FEE /* XMGDetailController.m */,
+				2CCF0E211FEA070300D75FEE /* XMGDetailController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -858,11 +879,13 @@
 				2C63849D1FE79B5F0025CAE7 /* XMGSubscribeCell.xib in Resources */,
 				2CB25EBD1FE12D830040C946 /* XMGPhotoWatchViewController.xib in Resources */,
 				2CC61F101FE3729100406A07 /* XMGSelectViewController.xib in Resources */,
+				2CCF0E231FEA070300D75FEE /* XMGDetailController.xib in Resources */,
 				2C6384951FE769AF0025CAE7 /* XMGsubscribeController.xib in Resources */,
 				2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */,
 				F10B9CF11EF0CD1800FF8BCE /* Assets.xcassets in Resources */,
 				2CC61F151FE3AF2C00406A07 /* XMGSelectCollectionController.xib in Resources */,
 				2CCE76131FD79AE2005E944A /* XMGTopicPictureView.xib in Resources */,
+				2C5A28EB1FEB8E4D008BF226 /* XMGCommentCell.xib in Resources */,
 				2CC61F1A1FE3BBEE00406A07 /* XMGSelectAssetController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -952,6 +975,7 @@
 				2C078B941FCE8E9B00750FC7 /* School.xcdatamodeld in Sources */,
 				2C078B911FCE86BB00750FC7 /* XMGCoreDataManager.m in Sources */,
 				2C61E56B1FD92C8000EE5EE5 /* HZPhotoBrowser.m in Sources */,
+				2C5A28E61FEB598A008BF226 /* XMGCommentHeaderView.m in Sources */,
 				2C4355301FC56D5E0015DB3F /* XMGGlobalTool.m in Sources */,
 				2C7A7DB81FDE576B00399419 /* XMGMusicManager.m in Sources */,
 				F10459F71F2A42F200A7DB5F /* UIView+XMGVIew.m in Sources */,
@@ -988,9 +1012,11 @@
 				2CA8B2D71FD7EEB600AFF686 /* XMGTopicVideoController.m in Sources */,
 				2C0DF0F21F9EDB720060B31F /* XMGMeCell.m in Sources */,
 				F1D050BC1F08B0890038FDC1 /* XMGTabBar.m in Sources */,
+				2CCF0E221FEA070300D75FEE /* XMGDetailController.m in Sources */,
 				2C6384A01FE7B41F0025CAE7 /* UIImage+XMGCategory.m in Sources */,
 				F1BDC5E91F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m in Sources */,
 				2CA8B2CF1FD7C75300AFF686 /* XMGTopicVoiceView.m in Sources */,
+				2C5A28EA1FEB8E4D008BF226 /* XMGCommentCell.m in Sources */,
 				2C0DF0EE1F9EDB4C0060B31F /* XMGMeViewController.m in Sources */,
 				2CE2E42D1FD4EDB400E9314C /* XMGExtensionConfig.m in Sources */,
 				2C4AAABE1FB3F41200CCCE97 /* XMGEssenceViewController.m in Sources */,

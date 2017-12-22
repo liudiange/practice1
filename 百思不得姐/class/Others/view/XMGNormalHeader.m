@@ -26,6 +26,7 @@
     [self setTitle:@"开始下拉刷新" forState:MJRefreshStateIdle];
     [self setTitle:@"正在刷新中" forState:MJRefreshStateRefreshing];
     [self setTitle:@"松手就可以刷新了" forState:MJRefreshStatePulling];
+    [self setTitle:@"不要太过分，差不多就得了" forState:MJRefreshStateNoMoreData];
     
     self.automaticallyChangeAlpha = YES;
     self.stateLabel.font = [UIFont systemFontOfSize:30.0];

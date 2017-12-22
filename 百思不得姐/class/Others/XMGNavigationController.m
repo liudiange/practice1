@@ -39,6 +39,8 @@
     [super pushViewController:viewController animated:animated];
 }
 - (void)back {
+    // 隐藏键盘
+    [self.view endEditing:YES];
     [self popViewControllerAnimated:YES];
 }
 #pragma mark - delegate 的方法

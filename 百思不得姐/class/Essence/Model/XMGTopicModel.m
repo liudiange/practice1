@@ -16,7 +16,7 @@
  */
 - (CGFloat)cellHeight {
     
-    if (_cellHeight) return _cellHeight;
+    if (_cellHeight > 0) return _cellHeight;
     _cellHeight = 60;
     // 计算发表内容的高度
     NSString *contextStr = self.text;

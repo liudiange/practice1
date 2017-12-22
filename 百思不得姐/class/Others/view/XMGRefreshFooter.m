@@ -25,6 +25,7 @@
     [self setTitle:@"哈哈哈" forState:MJRefreshStateIdle];
     [self setTitle:@"正在刷新中" forState:MJRefreshStateRefreshing];
     [self setTitle:@"你管的着吗" forState:MJRefreshStatePulling];
+    [self setTitle:@"别太过分刷新完了的" forState:MJRefreshStateNoMoreData];
 //    // 自定义的图片
 //    UIImage *image = [UIImage imageNamed:@"activities_black"];
 //    UIImage *image1 = [UIImage imageNamed:@"activities_white"];

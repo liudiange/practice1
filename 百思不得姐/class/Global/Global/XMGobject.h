@@ -10,6 +10,7 @@
 
 // 全局的内边句
 extern CGFloat const MarGen;
+extern CGFloat const SmallMarGen;
 // 相关的宏定义
 extern NSString *const VideoPlay;
 extern NSString *const VoiceRefresh;

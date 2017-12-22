@@ -17,10 +17,21 @@
     // user Model 的配置
     [XMGUserModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
-                 @"userId" : @"id",
+                 @"userId" : @"id"
                  };
     }];
-    
+    // comment Model
+    [XMGCommentModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"commentId" : @"id"
+                 };
+    }];
+    // comment Model 限制用户model
+//    [XMGCommentModel mj_setupObjectClassInArray:^NSDictionary *{
+//        return @{
+//                 @"user" : [XMGUserModel class]
+//                 };
+//    }];
     // XMGTopicModel 曲数组中第一个
     [XMGTopicModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
