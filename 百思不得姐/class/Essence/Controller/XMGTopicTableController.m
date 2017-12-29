@@ -18,7 +18,7 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import <CoreData/CoreData.h>
 #import "XMGDetailController.h"
-
+#import "UIView+XMGWindow.h"
 
 
 @interface XMGTopicTableController ()
@@ -79,10 +79,21 @@ static NSString * const TOPICId = @"topic";
     // 监听视频播放
     @weakify(self);
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:VideoPlay object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+         @strongify(self);
         XMGTopicModel *model = (XMGTopicModel *)x.object;
-        @strongify(self);
         [self creatOperationVc:model];
     }];
+    // 监听是否该在此刷新
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:RepeatClickNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+         @strongify(self);
+        // 是否是window
+        if (self.view.window == nil) return;
+        // 判断包含
+        if (![self.view intersectsView:[UIApplication sharedApplication].keyWindow]) return;
+        // 刷新
+        [self.tableView.mj_header beginRefreshing];
+    }];
+    
 }
 /**
  *

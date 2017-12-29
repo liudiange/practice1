@@ -141,6 +141,9 @@
  */
 - (void)buttonClickAction:(XMGTitleButton *)button {
     
+    if (self.currrentTitleButton == button) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:RepeatClickNotification object:nil];
+    }
     //  button选中的样式
     self.currrentTitleButton.selected = NO;
     button.selected = YES;

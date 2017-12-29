@@ -10,74 +10,81 @@
 #import "XMGTabBarController.h"
 #import "XMGDBBase.h"
 #import "XMGMigrationManager.h"
+#import "XMGNavigationController.h"
+#import "XMGEssenceViewController.h"
+#import "XMGAllViewController.h"
+#import "XMGVideoViewController.h"
+#import "XMGAudioViewController.h"
+#import "XMGPictureViewController.h"
+#import "XMGWordViewController.h"
 
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
-@interface AppDelegate ()
-{
-    UIWindow *window_;
-    
-}
-
+@property (nonatomic, strong) UIViewController *clickViewVc;
 
 @end
-
 @implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-
-    // 可以自动升级
-     [MagicalRecord setupAutoMigratingCoreDataStack];
-
-    //设置根控制器
-    XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
-    self.window.rootViewController = tabBarVc;
-    [self.window makeKeyAndVisible];
-    return YES;
-}
-/**
- *
- *  点击状态栏，tableview滚动到头部
- */
-- (void)addClickScrollerTop{
+#pragma mark - tabbar 的 delegate
+static int countNum = 0;
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+   
+    countNum ++;
+    XMGNavigationController *nav = (XMGNavigationController *)viewController;
+    for (UIViewController *viewVc  in nav.viewControllers) {
+        if ([viewVc isKindOfClass:[XMGEssenceViewController class]]) {
+            self.clickViewVc = viewVc;
+        }
+    }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //创建_window
-        window_ = [[UIWindow alloc] init];
-        window_.frame = CGRectMake(0, 0, ScreenWidth, 20);
-        window_.windowLevel = UIWindowLevelAlert;
-        window_.backgroundColor = [UIColor redColor];
-        // 直接显示了就
-        window_.hidden = NO;
-        //  添加点击手势
-        UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollerTap)];
-        [window_ addGestureRecognizer:tapGes];
+        if ([self.clickViewVc isKindOfClass:[XMGEssenceViewController class]] && countNum >= 2) {
+            XMGEssenceViewController *essenceVc = (XMGEssenceViewController *)self.clickViewVc;
+            for (UIViewController *childVc in essenceVc.childViewControllers) {
+                CGRect childVcRect = [childVc.view convertRect:childVc.view.bounds toView:nil];
+                CGRect windowRect = [UIApplication sharedApplication].keyWindow.bounds;
+                if (CGRectContainsRect(windowRect, childVcRect)) {
+                    [self refreshVc:childVc];
+                }
+            }
+        }
+        countNum = 0;
     });
 }
 /**
  *
- *  便利控制器，获取scrollerview 进行滚动到顶部
+ *  刷新界面
  */
-- (void)scrollerTap {
+- (void)refreshVc:(UIViewController *)childVc {
     
-    [self getScrollerView:[UIApplication sharedApplication].keyWindow];
-    
+    if ([childVc isKindOfClass:[XMGAllViewController class]]) {
+        XMGAllViewController *allVc = (XMGAllViewController *)childVc;
+        [allVc.tableView.mj_header beginRefreshing];
+    }else if ([childVc isKindOfClass:[XMGVideoViewController class]]){
+        XMGVideoViewController *videoVc = (XMGVideoViewController *)childVc;
+        [videoVc.tableView.mj_header beginRefreshing];
+    }else if ([childVc isKindOfClass:[XMGAudioViewController class]]){
+        XMGAudioViewController *voiceVc = (XMGAudioViewController *)childVc;
+        [voiceVc.tableView.mj_header beginRefreshing];
+    }else if ([childVc isKindOfClass:[XMGPictureViewController class]]){
+        XMGPictureViewController *pictureVc = (XMGPictureViewController *)childVc;
+        [pictureVc.tableView.mj_header beginRefreshing];
+    }else if ([childVc isKindOfClass:[XMGWordViewController class]]) {
+        XMGWordViewController *wordVc = (XMGWordViewController *)childVc;
+        [wordVc.tableView.mj_header beginRefreshing];
+    }
     
 }
-/**
- *
- *  获取scroller
- */
-- (void)getScrollerView:(UIView *)view {
+#pragma mark - application 的 delegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    for (UIView *subView in view.subviews) {
-        [self getScrollerView:subView];
-    }
-    if (![view isKindOfClass:[UIScrollView class]]) return;
-    UIScrollView *scrollerView = (UIScrollView *)view;
-    CGPoint point = scrollerView.contentOffset;
-    point.y = - scrollerView.contentInset.top;
-    [scrollerView setContentOffset:point animated:YES];
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    // 可以自动升级
+     [MagicalRecord setupAutoMigratingCoreDataStack];
+    //设置根控制器
+    XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
+    tabBarVc.delegate = self;
+    self.window.rootViewController = tabBarVc;
+    [self.window makeKeyAndVisible];
+    return YES;
 }
 /**
  *

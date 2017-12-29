@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 监听通知
-    [self addNotificaion];
+    [self addMySelfNotificaion];
     
 }
 #pragma mark - 方法的响应
@@ -38,7 +38,7 @@
  *
  *  监听通知
  */
-- (void)addNotificaion {
+- (void)addMySelfNotificaion {
     @weakify(self);
     //  刷新界面
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:VoiceRefreshFinish object:nil] subscribeNext:^(NSNotification * _Nullable x) {

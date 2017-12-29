@@ -28,6 +28,7 @@
 		2C4AAAC11FB3F43B00CCCE97 /* XMGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4AAAC01FB3F43B00CCCE97 /* XMGTitleButton.m */; };
 		2C51917F1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */; };
 		2C53C4991F54F60F00C0D612 /* XMGFellowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C53C4981F54F60F00C0D612 /* XMGFellowViewController.xib */; };
+		2C5703AE1FF47EC900BFD458 /* XMGTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5703AD1FF47EC900BFD458 /* XMGTopWindow.m */; };
 		2C5A28E61FEB598A008BF226 /* XMGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A28E51FEB598A008BF226 /* XMGCommentHeaderView.m */; };
 		2C5A28EA1FEB8E4D008BF226 /* XMGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A28E81FEB8E4D008BF226 /* XMGCommentCell.m */; };
 		2C5A28EB1FEB8E4D008BF226 /* XMGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A28E91FEB8E4D008BF226 /* XMGCommentCell.xib */; };
@@ -56,6 +57,7 @@
 		2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2C6DAE461FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql */; };
 		2C7451B61FDA1E6B00425F70 /* XMGTopicTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7451B51FDA1E6B00425F70 /* XMGTopicTableController.m */; };
 		2C7451B81FDA27EE00425F70 /* XMGTopicVideoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7451B71FDA27EE00425F70 /* XMGTopicVideoController.xib */; };
+		2C74BDC61FF5D4C500AAA25F /* UIView+XMGWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C74BDC51FF5D4C500AAA25F /* UIView+XMGWindow.m */; };
 		2C7A3C9A1F564C2400358CB9 /* XMGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A3C981F564C2400358CB9 /* XMGLoginViewController.m */; };
 		2C7A3C9B1F564C2400358CB9 /* XMGLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A3C991F564C2400358CB9 /* XMGLoginViewController.xib */; };
 		2C7A3C9F1F5651F300358CB9 /* XMGBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A3C9E1F5651F300358CB9 /* XMGBaseButton.m */; };
@@ -159,6 +161,8 @@
 		2C51917D1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+XMGGetCurrentController.h"; sourceTree = "<group>"; };
 		2C51917E1FE211C200DFFC05 /* NSObject+XMGGetCurrentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XMGGetCurrentController.m"; sourceTree = "<group>"; };
 		2C53C4981F54F60F00C0D612 /* XMGFellowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFellowViewController.xib; sourceTree = "<group>"; };
+		2C5703AC1FF47EC900BFD458 /* XMGTopWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopWindow.h; sourceTree = "<group>"; };
+		2C5703AD1FF47EC900BFD458 /* XMGTopWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopWindow.m; sourceTree = "<group>"; };
 		2C5A28E41FEB598A008BF226 /* XMGCommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGCommentHeaderView.h; sourceTree = "<group>"; };
 		2C5A28E51FEB598A008BF226 /* XMGCommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGCommentHeaderView.m; sourceTree = "<group>"; };
 		2C5A28E71FEB8E4D008BF226 /* XMGCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGCommentCell.h; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 		2C7451B41FDA1E6B00425F70 /* XMGTopicTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicTableController.h; sourceTree = "<group>"; };
 		2C7451B51FDA1E6B00425F70 /* XMGTopicTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTopicTableController.m; sourceTree = "<group>"; };
 		2C7451B71FDA27EE00425F70 /* XMGTopicVideoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGTopicVideoController.xib; sourceTree = "<group>"; };
+		2C74BDC41FF5D4C500AAA25F /* UIView+XMGWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XMGWindow.h"; sourceTree = "<group>"; };
+		2C74BDC51FF5D4C500AAA25F /* UIView+XMGWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMGWindow.m"; sourceTree = "<group>"; };
 		2C7A3C971F564C2400358CB9 /* XMGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginViewController.h; sourceTree = "<group>"; };
 		2C7A3C981F564C2400358CB9 /* XMGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginViewController.m; sourceTree = "<group>"; };
 		2C7A3C991F564C2400358CB9 /* XMGLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginViewController.xib; sourceTree = "<group>"; };
@@ -586,6 +592,8 @@
 				2C0DF0E11F9ED74C0060B31F /* UITextField+XMGTextField.m */,
 				F10459F51F2A42F200A7DB5F /* UIView+XMGVIew.h */,
 				F10459F61F2A42F200A7DB5F /* UIView+XMGVIew.m */,
+				2C74BDC41FF5D4C500AAA25F /* UIView+XMGWindow.h */,
+				2C74BDC51FF5D4C500AAA25F /* UIView+XMGWindow.m */,
 				F1BDC5E71F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.h */,
 				F1BDC5E81F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m */,
 				2C102CEE1FAFF4AD002B2720 /* NSString+XMGFileSize.h */,
@@ -748,6 +756,8 @@
 			children = (
 				2C43552E1FC56D5E0015DB3F /* XMGGlobalTool.h */,
 				2C43552F1FC56D5E0015DB3F /* XMGGlobalTool.m */,
+				2C5703AC1FF47EC900BFD458 /* XMGTopWindow.h */,
+				2C5703AD1FF47EC900BFD458 /* XMGTopWindow.m */,
 				2C7A7DB61FDE576B00399419 /* XMGMusicManager.h */,
 				2C7A7DB71FDE576B00399419 /* XMGMusicManager.m */,
 				2CC61F201FE3D73E00406A07 /* XMGImageManager.h */,
@@ -965,6 +975,7 @@
 				2C7451B61FDA1E6B00425F70 /* XMGTopicTableController.m in Sources */,
 				2C5B82731FB538640076A5A4 /* XMGAudioViewController.m in Sources */,
 				2C6384A31FE7BC750025CAE7 /* UIImageView+XMGCategory.m in Sources */,
+				2C74BDC61FF5D4C500AAA25F /* UIView+XMGWindow.m in Sources */,
 				F1D050B81F08B0450038FDC1 /* AppDelegate.m in Sources */,
 				2C61E5691FD92C8000EE5EE5 /* HZImagesGroupView.m in Sources */,
 				2C102CF01FAFF4AD002B2720 /* NSString+XMGFileSize.m in Sources */,
@@ -1017,6 +1028,7 @@
 				F1BDC5E91F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m in Sources */,
 				2CA8B2CF1FD7C75300AFF686 /* XMGTopicVoiceView.m in Sources */,
 				2C5A28EA1FEB8E4D008BF226 /* XMGCommentCell.m in Sources */,
+				2C5703AE1FF47EC900BFD458 /* XMGTopWindow.m in Sources */,
 				2C0DF0EE1F9EDB4C0060B31F /* XMGMeViewController.m in Sources */,
 				2CE2E42D1FD4EDB400E9314C /* XMGExtensionConfig.m in Sources */,
 				2C4AAABE1FB3F41200CCCE97 /* XMGEssenceViewController.m in Sources */,

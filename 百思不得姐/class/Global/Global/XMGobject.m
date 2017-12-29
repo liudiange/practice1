@@ -17,4 +17,7 @@ NSString *const VoiceRefresh = @"voiceRefresh";
 NSString *const VoiceRefreshFinish = @"voiceRefreshFinish";
 NSString *const ImageLableCount = @"imageLableCount";
 NSString *const SureImage = @"sureImage";
+NSString *const RepeatClickNotification = @"RepeatClickNotification";
+// 请求的数据
 NSString *const GetEssenceData = @"http://api.budejie.com/api/api_open.php";
+

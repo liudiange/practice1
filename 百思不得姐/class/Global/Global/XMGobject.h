@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 // 全局的内边句
-extern CGFloat const MarGen;
-extern CGFloat const SmallMarGen;
+UIKIT_EXTERN CGFloat const MarGen;
+UIKIT_EXTERN CGFloat const SmallMarGen;
 // 相关的宏定义
-extern NSString *const VideoPlay;
-extern NSString *const VoiceRefresh;
-extern NSString *const VoiceRefreshFinish;
-extern NSString *const ImageLableCount;
-extern NSString *const SureImage;
-extern NSString *const GetEssenceData;
+UIKIT_EXTERN NSString *const VideoPlay;
+UIKIT_EXTERN NSString *const VoiceRefresh;
+UIKIT_EXTERN NSString *const VoiceRefreshFinish;
+UIKIT_EXTERN NSString *const ImageLableCount;
+UIKIT_EXTERN NSString *const SureImage;
+UIKIT_EXTERN NSString *const RepeatClickNotification;
+// 请求的数据
+UIKIT_EXTERN NSString *const GetEssenceData;
+
