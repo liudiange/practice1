@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Post View Controller-->
+        <scene sceneID="KHn-mL-gh4">
+            <objects>
+                <viewController storyboardIdentifier="XMGNewPostViewController" id="UuG-Qd-yNU" customClass="XMGNewPostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O1G-ZZ-nfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="irN-EB-UaR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pwg-fs-L0k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj5-0M-S7g">
+                                <rect key="frame" x="54.5" y="30" width="266" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="8ff-j2-yJ6"/>
+                                    <constraint firstAttribute="height" constant="30" id="HU1-VN-yD2"/>
+                                </constraints>
+                                <state key="normal" title="继承自定义的textview">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bOv-7a-eKn" kind="show" id="CfI-l5-qbh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lj5-0M-S7g" firstAttribute="centerX" secondItem="pwg-fs-L0k" secondAttribute="centerX" id="A79-dt-JWs"/>
+                            <constraint firstItem="lj5-0M-S7g" firstAttribute="top" secondItem="O1G-ZZ-nfw" secondAttribute="bottom" constant="10" id="JeC-gO-2zX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="view" destination="pwg-fs-L0k" id="rp5-9W-TWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fgf-VI-Wb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="173"/>
+        </scene>
+        <!--New Post Test View Controller-->
+        <scene sceneID="Dzr-63-mLX">
+            <objects>
+                <viewController id="bOv-7a-eKn" customClass="XMGNewPostTestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QHx-AB-0cx"/>
+                        <viewControllerLayoutGuide type="bottom" id="KLF-sf-Gpc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iof-e7-dXb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zw-5I-TT1" customClass="XMGBaseTextView">
+                                <rect key="frame" x="0.0" y="105" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="f3D-Sy-Rfb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3zw-5I-TT1" firstAttribute="leading" secondItem="iof-e7-dXb" secondAttribute="leading" id="4OW-M6-Wz3"/>
+                            <constraint firstAttribute="trailing" secondItem="3zw-5I-TT1" secondAttribute="trailing" id="M1j-az-tc7"/>
+                            <constraint firstItem="3zw-5I-TT1" firstAttribute="top" secondItem="QHx-AB-0cx" secondAttribute="bottom" constant="85" id="nDb-Lx-0yT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="3zw-5I-TT1" id="96G-Bw-EeX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCZ-Kz-CYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="129"/>
+        </scene>
+    </scenes>
+</document>

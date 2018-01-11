@@ -48,7 +48,8 @@
 - (void)setUpController {
     
     [self creatChildVc:[[XMGNavigationController alloc]initWithRootViewController:[[XMGEssenceViewController alloc] init]] withTitle:@"精华" withImageName:@"bottom_messages_unselect" withSelectImageName:@"bottom_messages_select"];
-    [self creatChildVc:[[XMGNavigationController alloc]initWithRootViewController:[[XMGNewPostViewController alloc] init]] withTitle:@"新帖" withImageName:@"bottom_contact_unselect" withSelectImageName:@"bottom_contact_select"];
+    XMGNewPostViewController *postVc = [[UIStoryboard storyboardWithName:@"XMGNewPost" bundle:nil] instantiateViewControllerWithIdentifier:@"XMGNewPostViewController"];
+    [self creatChildVc:[[XMGNavigationController alloc]initWithRootViewController:postVc] withTitle:@"新帖" withImageName:@"bottom_contact_unselect" withSelectImageName:@"bottom_contact_select"];
     [self creatChildVc:[[XMGNavigationController alloc]initWithRootViewController:[[XMGFellowViewController alloc] init]] withTitle:@"关注" withImageName:@"bottom_wallet_unselect" withSelectImageName:@"bottom_wallet_select"];
     [self creatChildVc:[[XMGNavigationController alloc]initWithRootViewController:[[XMGMeViewController alloc] init]] withTitle:@"我" withImageName:@"bottom_setting_unselect" withSelectImageName:@"bottom_setting_select"];
     //自定义tabar替换

@@ -8,7 +8,10 @@
 
 #import "XMGNewPostViewController.h"
 
+
 @interface XMGNewPostViewController ()
+
+
 
 @end
 
@@ -21,10 +24,5 @@
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"1百思不得姐1_146x146_@1x"]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-    
-    
-}
+
 @end

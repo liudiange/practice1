@@ -62,6 +62,10 @@
 		2C7A3C9B1F564C2400358CB9 /* XMGLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A3C991F564C2400358CB9 /* XMGLoginViewController.xib */; };
 		2C7A3C9F1F5651F300358CB9 /* XMGBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A3C9E1F5651F300358CB9 /* XMGBaseButton.m */; };
 		2C7A7DB81FDE576B00399419 /* XMGMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A7DB71FDE576B00399419 /* XMGMusicManager.m */; };
+		2C90575C2007533D0094B2BF /* XMGNewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C90575B2007533D0094B2BF /* XMGNewPost.storyboard */; };
+		2C905765200758030094B2BF /* XMGNewPostTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C905762200758030094B2BF /* XMGNewPostTestViewController.m */; };
+		2C905766200758030094B2BF /* XMGNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C905764200758030094B2BF /* XMGNewPostViewController.m */; };
+		2C90576B200758430094B2BF /* XMGBaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C90576A200758430094B2BF /* XMGBaseTextView.m */; };
 		2C9769141FC26293005D5DE4 /* XMGRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9769131FC26293005D5DE4 /* XMGRefreshFooter.m */; };
 		2C9769171FC2663E005D5DE4 /* XMGTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9769161FC2663E005D5DE4 /* XMGTopicModel.m */; };
 		2CA8B2CF1FD7C75300AFF686 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B2CE1FD7C75300AFF686 /* XMGTopicVoiceView.m */; };
@@ -96,7 +100,6 @@
 		F10B9CFF1EF0CD1800FF8BCE /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F10B9CFE1EF0CD1800FF8BCE /* _____Tests.m */; };
 		F10B9D0A1EF0CD1800FF8BCE /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F10B9D091EF0CD1800FF8BCE /* _____UITests.m */; };
 		F1BDC5E91F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BDC5E81F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m */; };
-		F1BDC5EC1F3226120020F91C /* XMGNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BDC5EB1F3226120020F91C /* XMGNewPostViewController.m */; };
 		F1BDC5EF1F3226E30020F91C /* XMGFellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BDC5EE1F3226E30020F91C /* XMGFellowViewController.m */; };
 		F1D050B81F08B0450038FDC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D050B41F08B0450038FDC1 /* AppDelegate.m */; };
 		F1D050B91F08B0450038FDC1 /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D050B61F08B0450038FDC1 /* XMGTabBarController.m */; };
@@ -222,6 +225,13 @@
 		2C7A3C9E1F5651F300358CB9 /* XMGBaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGBaseButton.m; sourceTree = "<group>"; };
 		2C7A7DB61FDE576B00399419 /* XMGMusicManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGMusicManager.h; sourceTree = "<group>"; };
 		2C7A7DB71FDE576B00399419 /* XMGMusicManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGMusicManager.m; sourceTree = "<group>"; };
+		2C90575B2007533D0094B2BF /* XMGNewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XMGNewPost.storyboard; sourceTree = "<group>"; };
+		2C905761200758030094B2BF /* XMGNewPostTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewPostTestViewController.h; sourceTree = "<group>"; };
+		2C905762200758030094B2BF /* XMGNewPostTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewPostTestViewController.m; sourceTree = "<group>"; };
+		2C905763200758030094B2BF /* XMGNewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewPostViewController.h; sourceTree = "<group>"; };
+		2C905764200758030094B2BF /* XMGNewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewPostViewController.m; sourceTree = "<group>"; };
+		2C905769200758430094B2BF /* XMGBaseTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGBaseTextView.h; sourceTree = "<group>"; };
+		2C90576A200758430094B2BF /* XMGBaseTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGBaseTextView.m; sourceTree = "<group>"; };
 		2C9769121FC26293005D5DE4 /* XMGRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGRefreshFooter.h; sourceTree = "<group>"; };
 		2C9769131FC26293005D5DE4 /* XMGRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGRefreshFooter.m; sourceTree = "<group>"; };
 		2C9769151FC2663E005D5DE4 /* XMGTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicModel.h; sourceTree = "<group>"; };
@@ -285,8 +295,6 @@
 		F14E403D1F0752350065B1CF /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F1BDC5E71F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XMGBarButtonItem.h"; sourceTree = "<group>"; };
 		F1BDC5E81F32233C0020F91C /* UIBarButtonItem+XMGBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XMGBarButtonItem.m"; sourceTree = "<group>"; };
-		F1BDC5EA1F3226120020F91C /* XMGNewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewPostViewController.h; sourceTree = "<group>"; };
-		F1BDC5EB1F3226120020F91C /* XMGNewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewPostViewController.m; sourceTree = "<group>"; };
 		F1BDC5ED1F3226E30020F91C /* XMGFellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFellowViewController.h; sourceTree = "<group>"; };
 		F1BDC5EE1F3226E30020F91C /* XMGFellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFellowViewController.m; sourceTree = "<group>"; };
 		F1D050B31F08B0450038FDC1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -568,6 +576,42 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		2C905758200752D30094B2BF /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				2C90575B2007533D0094B2BF /* XMGNewPost.storyboard */,
+			);
+			name = StoryBoard;
+			path = "百思不得姐/class/StoryBoard";
+			sourceTree = SOURCE_ROOT;
+		};
+		2C905760200758030094B2BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C905761200758030094B2BF /* XMGNewPostTestViewController.h */,
+				2C905762200758030094B2BF /* XMGNewPostTestViewController.m */,
+				2C905763200758030094B2BF /* XMGNewPostViewController.h */,
+				2C905764200758030094B2BF /* XMGNewPostViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C905767200758100094B2BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C905769200758430094B2BF /* XMGBaseTextView.h */,
+				2C90576A200758430094B2BF /* XMGBaseTextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C905768200758110094B2BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5615C6B56A7318B0349A5A7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +723,7 @@
 				F1D050AF1F08B0450038FDC1 /* Global */,
 				F1D050B21F08B0450038FDC1 /* Others */,
 				F1D050B71F08B0450038FDC1 /* Tools */,
+				2C905758200752D30094B2BF /* StoryBoard */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -726,8 +771,9 @@
 		F1D050B11F08B0450038FDC1 /* NewPosts */ = {
 			isa = PBXGroup;
 			children = (
-				F1BDC5EA1F3226120020F91C /* XMGNewPostViewController.h */,
-				F1BDC5EB1F3226120020F91C /* XMGNewPostViewController.m */,
+				2C905768200758110094B2BF /* Model */,
+				2C905767200758100094B2BF /* View */,
+				2C905760200758030094B2BF /* Controller */,
 			);
 			path = NewPosts;
 			sourceTree = "<group>";
@@ -890,6 +936,7 @@
 				2CB25EBD1FE12D830040C946 /* XMGPhotoWatchViewController.xib in Resources */,
 				2CC61F101FE3729100406A07 /* XMGSelectViewController.xib in Resources */,
 				2CCF0E231FEA070300D75FEE /* XMGDetailController.xib in Resources */,
+				2C90575C2007533D0094B2BF /* XMGNewPost.storyboard in Resources */,
 				2C6384951FE769AF0025CAE7 /* XMGsubscribeController.xib in Resources */,
 				2C6DAE471FCC1B2C00F2077F /* 20171127180608562_migrationNew.sql in Resources */,
 				F10B9CF11EF0CD1800FF8BCE /* Assets.xcassets in Resources */,
@@ -969,7 +1016,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BDC5EC1F3226120020F91C /* XMGNewPostViewController.m in Sources */,
 				2C309BB21F3AE1B5003C0153 /* XMGNavigationController.m in Sources */,
 				2C313BA41FBD375700279AFB /* XMGNormalHeader.m in Sources */,
 				2C7451B61FDA1E6B00425F70 /* XMGTopicTableController.m in Sources */,
@@ -987,10 +1033,12 @@
 				2C078B911FCE86BB00750FC7 /* XMGCoreDataManager.m in Sources */,
 				2C61E56B1FD92C8000EE5EE5 /* HZPhotoBrowser.m in Sources */,
 				2C5A28E61FEB598A008BF226 /* XMGCommentHeaderView.m in Sources */,
+				2C90576B200758430094B2BF /* XMGBaseTextView.m in Sources */,
 				2C4355301FC56D5E0015DB3F /* XMGGlobalTool.m in Sources */,
 				2C7A7DB81FDE576B00399419 /* XMGMusicManager.m in Sources */,
 				F10459F71F2A42F200A7DB5F /* UIView+XMGVIew.m in Sources */,
 				F1D050B91F08B0450038FDC1 /* XMGTabBarController.m in Sources */,
+				2C905765200758030094B2BF /* XMGNewPostTestViewController.m in Sources */,
 				2C3C7C2E1FC3D46900A5B3CB /* XMGSessionManager.m in Sources */,
 				2C6328BA1FC7C2450075BFA2 /* XMGDBBase.m in Sources */,
 				2C6384901FE75BD00025CAE7 /* XMGImageModel.m in Sources */,
@@ -1016,6 +1064,7 @@
 				2CC61F191FE3BBEE00406A07 /* XMGSelectAssetController.m in Sources */,
 				2C5B82791FB538890076A5A4 /* XMGWordViewController.m in Sources */,
 				2CC61F1E1FE3C8E900406A07 /* XMGImageCollectionViewCell.m in Sources */,
+				2C905766200758030094B2BF /* XMGNewPostViewController.m in Sources */,
 				2C3C7C2A1FC3B9E300A5B3CB /* XMGTopicCell.m in Sources */,
 				2C9769141FC26293005D5DE4 /* XMGRefreshFooter.m in Sources */,
 				2CE2E4271FD4E58500E9314C /* XMGCommentModel.m in Sources */,
