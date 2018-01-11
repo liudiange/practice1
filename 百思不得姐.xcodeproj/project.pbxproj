@@ -66,6 +66,7 @@
 		2C905765200758030094B2BF /* XMGNewPostTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C905762200758030094B2BF /* XMGNewPostTestViewController.m */; };
 		2C905766200758030094B2BF /* XMGNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C905764200758030094B2BF /* XMGNewPostViewController.m */; };
 		2C90576B200758430094B2BF /* XMGBaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C90576A200758430094B2BF /* XMGBaseTextView.m */; };
+		2C90576E20076AC20094B2BF /* TRAQuestionPlaceholderLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C90576C20076AC20094B2BF /* TRAQuestionPlaceholderLable.m */; };
 		2C9769141FC26293005D5DE4 /* XMGRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9769131FC26293005D5DE4 /* XMGRefreshFooter.m */; };
 		2C9769171FC2663E005D5DE4 /* XMGTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9769161FC2663E005D5DE4 /* XMGTopicModel.m */; };
 		2CA8B2CF1FD7C75300AFF686 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B2CE1FD7C75300AFF686 /* XMGTopicVoiceView.m */; };
@@ -232,6 +233,8 @@
 		2C905764200758030094B2BF /* XMGNewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewPostViewController.m; sourceTree = "<group>"; };
 		2C905769200758430094B2BF /* XMGBaseTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGBaseTextView.h; sourceTree = "<group>"; };
 		2C90576A200758430094B2BF /* XMGBaseTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGBaseTextView.m; sourceTree = "<group>"; };
+		2C90576C20076AC20094B2BF /* TRAQuestionPlaceholderLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAQuestionPlaceholderLable.m; sourceTree = "<group>"; };
+		2C90576D20076AC20094B2BF /* TRAQuestionPlaceholderLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAQuestionPlaceholderLable.h; sourceTree = "<group>"; };
 		2C9769121FC26293005D5DE4 /* XMGRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGRefreshFooter.h; sourceTree = "<group>"; };
 		2C9769131FC26293005D5DE4 /* XMGRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGRefreshFooter.m; sourceTree = "<group>"; };
 		2C9769151FC2663E005D5DE4 /* XMGTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTopicModel.h; sourceTree = "<group>"; };
@@ -601,6 +604,8 @@
 			children = (
 				2C905769200758430094B2BF /* XMGBaseTextView.h */,
 				2C90576A200758430094B2BF /* XMGBaseTextView.m */,
+				2C90576D20076AC20094B2BF /* TRAQuestionPlaceholderLable.h */,
+				2C90576C20076AC20094B2BF /* TRAQuestionPlaceholderLable.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1038,6 +1043,7 @@
 				2C7A7DB81FDE576B00399419 /* XMGMusicManager.m in Sources */,
 				F10459F71F2A42F200A7DB5F /* UIView+XMGVIew.m in Sources */,
 				F1D050B91F08B0450038FDC1 /* XMGTabBarController.m in Sources */,
+				2C90576E20076AC20094B2BF /* TRAQuestionPlaceholderLable.m in Sources */,
 				2C905765200758030094B2BF /* XMGNewPostTestViewController.m in Sources */,
 				2C3C7C2E1FC3D46900A5B3CB /* XMGSessionManager.m in Sources */,
 				2C6328BA1FC7C2450075BFA2 /* XMGDBBase.m in Sources */,

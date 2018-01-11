@@ -95,6 +95,14 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+/*
+ 这段代码是用运行时方式书写的
+ //  题目的placeHoldLabl
+ TRAQuestionPlaceholderLable *topicLable = [[TRAQuestionPlaceholderLable alloc] initWithPlaceHolderColor:TRARGBColor(102, 102, 102) fontNumber:21.0 placeHoldText:@"请输入题目"];
+ [self.topicTextView addSubview:topicLable];
+ 
+ */
+
 @end
 
 
