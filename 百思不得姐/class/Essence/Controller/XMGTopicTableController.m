@@ -70,6 +70,7 @@ static NSString * const TOPICId = @"topic";
     self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
     self.tableView.backgroundColor = XMG_BACKGROUND_COLOR;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XMGTopicCell class]) bundle:nil] forCellReuseIdentifier:TOPICId];
+    self.tableView.estimatedRowHeight = 0;
 }
 /**
  *
