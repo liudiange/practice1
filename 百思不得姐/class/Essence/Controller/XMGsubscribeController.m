@@ -7,10 +7,10 @@
 //
 
 #import "XMGsubscribeController.h"
-#import "XMGSessionManager.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "XMGSubscribeModel.h"
 #import "XMGSubscribeCell.h"
+#import "XMGSubscribeServer.h"
 
 @interface XMGsubscribeController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -39,7 +39,6 @@ static NSString *cell_id = @"subscribe";
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [XMGSessionManager.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
     [SVProgressHUD dismiss];
 }
 
@@ -56,27 +55,26 @@ static NSString *cell_id = @"subscribe";
  *  获取数据
  */
 - (void)getData {
-    @weakify(self);
+
     [SVProgressHUD show];
-    [XMGSessionManager.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
-    NSMutableDictionary *parma = [NSMutableDictionary dictionary];
-    parma[@"a"] = @"tag_recommend";
-    parma[@"action"] = @"sub";
-    parma[@"c"] = @"topic";
-    [XMGSessionManager.manager GET:GetEssenceData parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
-        @strongify(self);
-        self.dataArray = [XMGSubscribeModel mj_objectArrayWithKeyValuesArray:responseObject];
-        [self.tableView reloadData];
-        [SVProgressHUD dismiss];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         dispatch_async(dispatch_get_main_queue(), ^{
+     @weakify(self);
+    XMGSubscribeServer *subServer = [[XMGSubscribeServer alloc] init];
+    [subServer startRequest:^(NSError * _Null_unspecified error) {
+        if (!error) {
+            @strongify(self);
+            self.dataArray = [XMGSubscribeModel mj_objectArrayWithKeyValuesArray:subServer.responDic];
+            [self.tableView reloadData];
             [SVProgressHUD dismiss];
-            [SVProgressHUD showWithStatus:@"网络数据错误了"];
-            [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                 [SVProgressHUD dismiss];
+        }else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+                [SVProgressHUD showWithStatus:@"网络数据错误了"];
+                [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                     [SVProgressHUD dismiss];
+                 });
              });
-         });
+        }
     }];
 }
 /**

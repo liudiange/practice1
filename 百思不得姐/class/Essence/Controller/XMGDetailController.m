@@ -11,9 +11,10 @@
 #import "XMGNormalHeader.h"
 #import "XMGRefreshFooter.h"
 #import "XMGCommentModel.h"
-#import "XMGSessionManager.h"
 #import "XMGCommentHeaderView.h"
 #import "XMGCommentCell.h"
+#import "XMGDetailpullRefreshServer.h"
+#import "XMGDetailLoadMoreServer.h"
 #import <MJExtension/MJExtension.h>
 
 
@@ -111,35 +112,28 @@ static NSString * const headerAndFooter_id = @"headerAndFooterId";
  *  下拉获取新的数据
  */
 - (void)pullRefreshData {
-    [XMGSessionManager.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
-    NSMutableDictionary *parma = [NSMutableDictionary dictionary];
-    parma[@"a"] = @"dataList";
-    parma[@"c"] = @"comment";
-    parma[@"data_id"] = self.topicModel.topicId;
-    parma[@"hot"] = @(1);
-    
-        @weakify(self);
-    [XMGSessionManager.manager GET:GetEssenceData parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+
+    @weakify(self);
+    XMGDetailpullRefreshServer *pullServer = [[XMGDetailpullRefreshServer alloc] pullRefreshTopicId:self.topicModel.topicId];
+    [pullServer startRequest:^(NSError * _Null_unspecified error) {
         @strongify(self);
-        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+        if (!error) {
+            self.hotArray = [XMGCommentModel mj_objectArrayWithKeyValuesArray:pullServer.hotArray];
+            self.commonArray = [XMGCommentModel mj_objectArrayWithKeyValuesArray:pullServer.dataArray];
+            if ([pullServer.totalStr integerValue] == (self.hotArray.count + self.commonArray.count)) {
+                 [self.tableView.mj_header endRefreshing];
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                return ;
+            }
+            [self.tableView reloadData];
             [self.tableView.mj_header endRefreshing];
-            [self.tableView.mj_footer endRefreshingWithNoMoreData];
-            return ;
-        }
-        self.hotArray = [XMGCommentModel mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];        
-        self.commonArray = [XMGCommentModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-        
-        if ([responseObject[@"total"] integerValue] == (self.hotArray.count + self.commonArray.count)) {
+        }else{
              [self.tableView.mj_header endRefreshing];
-            [self.tableView.mj_footer endRefreshingWithNoMoreData];
-            return ;
+            if (error.code == 100) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                return ;
+            }
         }
-        
-        [self.tableView reloadData];
-        [self.tableView.mj_header endRefreshing];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        @strongify(self);
-        [self.tableView.mj_header endRefreshing];
     }];
 }
 /**
@@ -147,33 +141,27 @@ static NSString * const headerAndFooter_id = @"headerAndFooterId";
  *  上拉加载更多
  */
 - (void)loadMoreData {
-    [XMGSessionManager.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
-    
-    NSMutableDictionary *parma = [NSMutableDictionary dictionary];
-    parma[@"a"] = @"dataList";
-    parma[@"c"] = @"comment";
-    parma[@"data_id"] = self.topicModel.topicId;
-    parma[@"lastcid"] = [self.commonArray lastObject].commentId;
-    @weakify(self);
-    [XMGSessionManager.manager GET:GetEssenceData parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+     @weakify(self);
+    XMGDetailLoadMoreServer *loadMoreServer = [[XMGDetailLoadMoreServer alloc] loadMore:self.topicModel.topicId commentId:[self.commonArray lastObject].commentId];
+    [loadMoreServer startRequest:^(NSError * _Null_unspecified error) {
         @strongify(self);
-        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+        if (!error) {
+            NSArray *temArray = [XMGCommentModel mj_objectArrayWithKeyValuesArray:loadMoreServer.dataArray];
+            if (!temArray.count) {
+                [self.tableView.mj_footer endRefreshing];
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                return ;
+            }
+            [self.commonArray addObjectsFromArray:temArray];
+            [self.tableView reloadData];
             [self.tableView.mj_footer endRefreshing];
-            [self.tableView.mj_footer endRefreshingWithNoMoreData];
-            return ;
+        }else{
+            [self.tableView.mj_header endRefreshing];
+            if (error.code == 100) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                return ;
+            }
         }
-        NSArray *temArray = [XMGCommentModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-        if (!temArray.count) {
-            [self.tableView.mj_footer endRefreshing];
-            [self.tableView.mj_footer endRefreshingWithNoMoreData];
-            return ;
-        }
-        [self.commonArray addObjectsFromArray:temArray];
-        [self.tableView reloadData];
-        [self.tableView.mj_footer endRefreshing];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        @strongify(self);
-        [self.tableView.mj_footer endRefreshing];
     }];
 }
 - (void)addNotification {

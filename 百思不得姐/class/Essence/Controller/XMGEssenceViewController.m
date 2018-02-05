@@ -136,8 +136,8 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButton:self imageName:@"点击马赛克_27x27_" selectImageName:@"点击马赛克_27x27_" action:@selector(buttonAction)];
 }
 /**
- *
- *  按钮的点击事件
+ 按钮的点击事件
+ @param button button的点击事件
  */
 - (void)buttonClickAction:(XMGTitleButton *)button {
     

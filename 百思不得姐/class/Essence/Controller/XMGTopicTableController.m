@@ -12,14 +12,13 @@
 #import "XMGTopicModel.h"
 #import "XMGRefreshFooter.h"
 #import "XMGTopicCell.h"
-#import "XMGSessionManager.h"
 #import "XMGCommentModel.h"
 #import "XMGTopicVideoController.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import <CoreData/CoreData.h>
 #import "XMGDetailController.h"
 #import "UIView+XMGWindow.h"
-
+#import "XMGTopicServer.h"
 
 @interface XMGTopicTableController ()
 
@@ -103,22 +102,19 @@ static NSString * const TOPICId = @"topic";
 - (void)setRefresh {
     XMGNormalHeader *normalHeader = [XMGNormalHeader headerWithRefreshingBlock:^{
         @weakify(self);
-        [XMGSessionManager.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
-        NSMutableDictionary *parma = [NSMutableDictionary dictionary];
-        parma[@"a"] = @"list";
-        parma[@"c"] = @"data";
-        parma[@"type"] = @(self.type);
-        [XMGSessionManager.manager GET:GetEssenceData parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
-            @strongify(self);
-            self.maxTime = responseObject[@"info"][@"maxtime"];
-            self.dataArray = [XMGTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-            [self.tableView reloadData];
-            [self.tableView.mj_header endRefreshing];
-            // 缓存数据
-            [self cacheData:self.dataArray.copy];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //新的网络请求管理器
+        XMGTopicServer *pullRefreshServer = [[XMGTopicServer alloc] pullRefresh:self.type];
+        [pullRefreshServer startRequest:^(NSError * _Null_unspecified error) {
             @strongify(self);
             [self.tableView.mj_header endRefreshing];
+            if (!error) {
+                self.maxTime = pullRefreshServer.maxTime;
+                self.dataArray = [XMGTopicModel mj_objectArrayWithKeyValuesArray:pullRefreshServer.listArray];
+                [self.tableView reloadData];
+                [self.tableView.mj_header endRefreshing];
+                // 缓存数据
+                [self cacheData:self.dataArray.copy];
+            }
         }];
     }];
     self.tableView.mj_header = normalHeader;
@@ -130,19 +126,21 @@ static NSString * const TOPICId = @"topic";
  */
 - (void)loadMore {
     
-    XMGRefreshFooter *freshFooter = [XMGRefreshFooter footerWithRefreshingBlock:^{
+    XMGRefreshFooter *freshFooter = [XMGRe
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     freshFooter footerWithRefreshingBlock:^{
         @weakify(self);
-        [XMGSessionManager.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
-        if (![self isHaveMoreDataAndRefresh]) {
-            NSMutableDictionary *parma = [NSMutableDictionary dictionary];
-            parma[@"a"] = @"list";
-            parma[@"c"] = @"data";
-            parma[@"maxtime"] = self.maxTime;
-            parma[@"type"] = @(self.type);
-            [XMGSessionManager.manager GET:GetEssenceData parameters:parma progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
-                @strongify(self);
-                self.maxTime = responseObject[@"info"][@"maxtime"];
-                NSArray *array = [XMGTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        XMGTopicServer *server = [[XMGTopicServer alloc]loadMore:self.type withMaxTime:self.maxTime];
+        [server startRequest:^(NSError * _Null_unspecified error) {
+            @strongify(self);
+            [self.tableView.mj_footer endRefreshing];
+            if (!error) {
+                self.maxTime = server.maxTime;
+                NSArray *array = [XMGTopicModel mj_objectArrayWithKeyValuesArray:server.listArray];
                 [self.dataArray addObjectsFromArray:array];
                 // 开始缓存数据
                 [self cacheData:array];
@@ -150,11 +148,8 @@ static NSString * const TOPICId = @"topic";
                     [self.tableView reloadData];
                     [self.tableView.mj_footer endRefreshing];
                 });
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                @strongify(self);
-                [self.tableView.mj_footer endRefreshing];
-            }];
-        }
+            }
+        }];
     }];
     self.tableView.mj_footer = freshFooter;
 }
