@@ -19,10 +19,6 @@
  请求的管理者
  */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
-// 一个小小的测试
-@property (nonatomic, strong) NSString *str;
-// 一个小小的测试
-@property (nonatomic, strong) NSString *ashdhashd;
 /**
  请求的任务
  */
