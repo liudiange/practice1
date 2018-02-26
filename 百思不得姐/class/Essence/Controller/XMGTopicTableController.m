@@ -126,13 +126,7 @@ static NSString * const TOPICId = @"topic";
  */
 - (void)loadMore {
     
-    XMGRefreshFooter *freshFooter = [XMGRe
-                                     
-                                     
-                                     
-                                     
-                                     
-                                     freshFooter footerWithRefreshingBlock:^{
+    XMGRefreshFooter *freshFooter = [XMGRefreshFooter footerWithRefreshingBlock:^{
         @weakify(self);
         XMGTopicServer *server = [[XMGTopicServer alloc]loadMore:self.type withMaxTime:self.maxTime];
         [server startRequest:^(NSError * _Null_unspecified error) {
